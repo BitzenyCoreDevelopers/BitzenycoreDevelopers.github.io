@@ -6,12 +6,26 @@
 
 body {
     background: #FAFAFA;
-    color: #444;
-    font-weight: 100;
-    font-size: 14pt;
+    color: #18181a;
+    overflow-x: hidden;
+    font-size: 20px;
     margin: 0 auto;
     padding: 0;
     outline: none;
+    max-width: 1024px;
+}
+
+p {
+    line-height: 2em;
+}
+
+.lh1_5{
+    line-height: 1.5em;
+}
+
+.font-sans {
+    font-family: 'Noto Sans Japanese';
+    font-weight: 200;
 }
 
 a:link,
@@ -26,8 +40,8 @@ a img {
 
 h1,
 h2 {
-    font-size: 2.5rem;
-    padding-bottom: 32px;
+    font-size: 2.4rem;
+    padding-bottom: 18px;
     font-weight: 100;
     line-height: 1em;
 }
@@ -39,6 +53,14 @@ h2 {
 
 .font-s2 {
     font-size: 80%;
+}
+
+.font-l {
+    font-size: 2.6rem;
+}
+
+.font-b {
+    font-weight: 500;
 }
 
 /*■margin■*/
@@ -59,8 +81,18 @@ h2 {
     margin: 16px;
 }
 
-.mt72 {
-    margin-top: 72px;
+.mt48 {
+    margin-top: 48px;
+}
+.mt120 {
+    margin-top: 120px;
+}
+.mt160 {
+    margin-top: 160px;
+}
+
+.mt-100 {
+    margin-top: -100px;
 }
 
 .mb8 {
@@ -81,6 +113,10 @@ h2 {
 
 .mb64 {
     margin-bottom: 64px;
+}
+
+.mb100 {
+    margin-bottom: 100px;
 }
 
 .p8 {
@@ -111,8 +147,20 @@ h2 {
     padding-top: 64px;
 }
 
-.pt112 {
-    padding-top: 112px;
+.pt120 {
+    padding-top: 120px;
+}
+
+.pt200 {
+    padding-top: 200px;
+}
+
+.pt300 {
+    padding-top: 300px;
+}
+
+.pt400 {
+    padding-top: 400px;
 }
 
 .pb0 {
@@ -133,6 +181,34 @@ h2 {
 
 .pb64 {
     padding-bottom: 64px;
+}
+
+.pb100 {
+    padding-bottom: 100px;
+}
+
+.pb120 {
+    padding-bottom: 120px;
+}
+
+.pb160 {
+    padding-bottom: 160px;
+}
+
+.pb200 {
+    padding-bottom: 200px;
+}
+
+.pb300 {
+    padding-bottom: 300px;
+}
+
+.pb400 {
+    padding-bottom: 400px;
+}
+
+.plr8 {
+    padding: 0 8px;
 }
 
 /*■grid gap■*/
@@ -190,7 +266,7 @@ h2 {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
-    margin-top;
+
     font-size: 80%;
 }
 
@@ -203,8 +279,13 @@ ul.ddmenu ul {
 }
 
 ul.ddmenu ul li a {
-    background: #333;
     padding: 13px;
+    margin: 1px 0 1px;
+}
+
+.pc_menu ul.ddmenu ul li a {
+    background: rgba(0, 0, 0, 0.8);
+
 }
 
 ul.ddmenu ul ul {
@@ -212,7 +293,7 @@ ul.ddmenu ul ul {
     position: absolute;
 }
 
-s.scrollbar {
+.scrollbar {
     overflow-y: scroll;
 }
 
@@ -221,10 +302,12 @@ s.scrollbar {
     position: absolute;
 }
 
+/*
 .scrollbar::-webkit-scrollbar-track {
     border-radius: 4px;
     background: #eee;
 }
+*/
 
 .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 4px;
@@ -258,8 +341,8 @@ li.hide {
 /*■色■*/
 
 .theme_dark {
-    background: #222;
-    color: #FFF;
+    background: #0c0d0c;
+    color: #eeedeb;
 }
 
 h1,
@@ -276,28 +359,28 @@ h3 {
 }
 
 header {
-    background: #333;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .menu a,
 .ddmenu a {
-    color: #FFF;
-}
-
-.scrollbar {
-    background: #FFF;
+    color: #eeedeb;
 }
 
 .bg_gray {
-    background: #EEE;
+    background: #d5d4d2;
+}
+
+.bg_black {
+    background: #000;
 }
 
 .color1 {
-    background: #007bff;
+    background: #5396ff;
 }
 
 .color2 {
-    background: #343a40;
+    background: #838383;
 }
 
 .color3 {
@@ -318,8 +401,40 @@ header {
 }
 
 .font_gray {
-    color: #343a40!important;
-    font-weight: 400;
+    color: #161716!important;
+}
+
+.tiltbg_white:before {
+    background: #eeedeb;
+}
+
+.tiltbg_gray:before {
+    background: #0c0d0c;
+}
+
+.tiltbg_navy:before {
+    background: #0a0f2c;
+}
+
+.tiltbg_samurai:before {
+    background-image: url(../img/samurai2.jpg);
+    background-position: center;
+
+}
+
+.tiltbg_katana:before {
+    background-image: url(../img/katana2.jpg);
+    background-position: center;
+
+}
+
+.tiltbg_shibuya:before {
+    background-image: url(../img/shibuya.jpg);
+    background-position: center;
+}
+
+.border {
+    border: 1px solid #aaa;
 }
 
 .border_b {
@@ -328,6 +443,29 @@ header {
 
 .border_t {
     border-top: 1px solid #aaa;
+}
+
+.glow {
+    -webkit-box-shadow: 0 0 12px 0 #ffffd7;
+    box-shadow: 0 0 12px 0 #ffffd7;
+}
+
+tr:nth-child(1) th {
+    background-color: #212552!important;
+}
+
+tr:nth-child(even) td {
+    background: #151b35!important;
+}
+
+tr:nth-child(odd) td {
+    background: #1f253f!important;
+}
+
+th,
+td {
+    padding: 8px!important;
+    border-color: #0a0f2c!important;
 }
 
 /*■個別調整■*/
@@ -339,6 +477,16 @@ header {
     background-size: cover;
 }
 
+.bg_cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg_p_center {
+    background-position: center;
+}
+
 .l-2grid1_5 div {
     line-height: 1.2em;
 }
@@ -348,7 +496,6 @@ header {
     text-align: center;
     min-height: 80px;
     padding: 16px;
-    border: 1px solid rgba(136, 136, 136, 0.3);
 }
 
 .tag div {
@@ -357,7 +504,7 @@ header {
 
 .tag span {
     display: inline-block;
-    color: #FFF;
+    color: #eeedeb;
     font-size: 1rem;
     padding: 4px 8px 4px 8px;
     margin: 4px;
@@ -365,9 +512,22 @@ header {
 
 .iconize-square {
     text-align: center;
-    padding: 10px 32px 14px;
-    border-radius: 2px;
+    padding: 4px 32px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
 
+.iconize-round {
+    text-align: center;
+    padding: 4px 16px 6px;
+    border-radius: 32px;
+    display: inline-block;
+}
+
+.iconize-round2 {
+    text-align: center;
+    padding: 4px 32px 5px;
+    border-radius: 32px;
     display: inline-block;
 }
 
@@ -385,3 +545,50 @@ a:hover {
     /* ie8 */
     margin: 0 auto;
 }
+
+.tilt {
+    position: relative;
+    margin-top: -150px;
+    padding: 0;
+    z-index: 10;
+}
+
+.tilt:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    min-width: 320%;
+    min-height: 100%;
+    margin: 0 -100%;
+    padding-bottom: 650px;
+    -webkit-transform-origin: 50% 50;
+    -ms-transform-origin: 50% 50;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(-14deg);
+    -ms-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+    z-index: -1;
+}
+
+.scroll {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.top0 {
+    top: 0;
+}
+
+/*
+.circle {
+    background-image: url("../img/circle.svg");
+    background-repeat: no-repeat;
+    margin-top: -16px;
+    padding-top: 40px;
+    background-position: 50% 50%;
+    background-size: 100px;
+    overflow: visible;
+}
+*/
+

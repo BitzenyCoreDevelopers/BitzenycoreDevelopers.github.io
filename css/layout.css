@@ -89,6 +89,9 @@
 .l-t_l {
     text-align: left;
 }
+.l-t_r {
+    text-align: right;
+}
 
 .l-iblock p {
     display: inline-block;
