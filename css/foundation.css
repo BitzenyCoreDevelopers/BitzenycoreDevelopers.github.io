@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/*■本文■*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+/*@import url('https://fonts.googleapis.com/css?family=Muli');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-family: 'Noto Sans Japanese', 'Meiryo UI', 'Meiryo', 'メイリオ', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'sans-serif';
+}
