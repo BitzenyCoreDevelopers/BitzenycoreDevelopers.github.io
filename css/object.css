@@ -2,23 +2,28 @@
 
 /* CSS Document */
 
-
 /*■共通部分■*/
+
 .w100per {
     width: 100%;
 }
+
 .w60per {
     max-width: 60%;
 }
+
 .w66per {
     width: 66.6%;
 }
+
 .w50per2 {
     width: 50%;
 }
+
 .w40per {
     width: 40%;
 }
+
 .w33per {
     width: 33.3%;
 }
@@ -28,34 +33,88 @@
 }
 
 .w1k {
-    max-width: 1200px;
+    max-width: 1024px;
 }
+
 .w2k {
     max-width: 2000px;
 }
+
 .w800 {
     max-width: 800px;
 }
+
 .w600 {
     width: 600px;
 }
-.h100per{
+
+.w300 {
+    max-width: 300px;
+}
+
+.w100 {
+    width: 120px;
+}
+
+.h100per {
     height: 100%;
 }
-.h40per{
+
+.h40per {
     height: 40%;
 }
+
+.h1k {
+    height: 1000px;
+}
+
+.h800 {
+    height: 800px;
+}
+
+.h680 {
+    height: 680px;
+}
+
+.h600 {
+    height: 500px;
+}
+
+.h500 {
+    height: 500px;
+}
+
+.h400 {
+    height: 400px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.h260 {
+    height: 260px;
+}
+
+.h210 {
+    height: 210px;
+}
+
 .h160 {
     height: 160px;
 }
-.h48{
+
+
+.h48 {
     height: 48px;
 }
-.h8{
+
+.h8 {
     height: 8px;
 }
-.h600{
-    height: 600px;
+
+.h100vh {
+    height: 100vh;
 }
 
 .block {
@@ -65,21 +124,29 @@
 
 /*■パーツ■*/
 
-header{
+header {
     min-height: 48px;
 }
-.menu > *,
-.ddmenu a{
-    padding: 13px;
+
+.menu > * {
+    padding: 10px 10px 12px;
 
 }
-.sp_menu{
+
+.ddmenu a {
+    padding: 6px 10px 10px;
+
+}
+
+.sp_menu {
     display: none;
 }
+
 .sp_menu a,
-.sp_menu li{
+.sp_menu li {
     width: 100%;
 }
+
 .logo {
     height: 24px;
     margin-right: 4px;
@@ -98,6 +165,7 @@ header{
 
 
 /*■レスポンシブ■*/
+
 @media screen and (max-width: 1199px) {
     .slider {
         display: none!important;
@@ -107,19 +175,29 @@ header{
     }
 }
 
+@media screen and (max-width: 720px) {
+    .pc_menu {
+        display: none;
+    }
+    .sp_menu {
+        display: block;
+    }
+}
 
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .w60per {
+        min-width: 50%;
+    }
+    .w33per {
+        min-width: 50%;
+    }
+}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 599px) {
     .w60per,
     .w50per,
     .w40per,
-    .w33per{
+    .w33per {
         min-width: 100%;
-    }
-    .pc_menu{
-        display: none;
-    }
-    .sp_menu{
-        display: block;
     }
 }
