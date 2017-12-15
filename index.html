@@ -88,6 +88,7 @@
         function parallax() {
             var scrolled = $(window).scrollTop();
             $('.parallax').css('top', -(scrolled * 0.5) + 'px');
+            $('.parallax2').css('top', 1080 -(scrolled * 0.4) + 'px');
         }
     </script>
 </head>
@@ -163,7 +164,7 @@
             </div>
         </section>
         <!--刀-->
-        <div id="katana" class="h1k bg_p_center bg_cover tiltbg_katana tilt z-10"></div>
+        <div id="katana" class="mt-400 h1k bg_p_center bg_cover tiltbg_katana tilt z-10"></div>
         <!--説明-->
         <section class="tilt tilt-14 tiltbg_gray">
             <div class="pt200 pb200">
@@ -211,7 +212,7 @@
             </div>
         </section>
         <!--ダウンロード-->
-        <section id="2" class="tilt tilt-14 tiltbg_white font_gray">
+        <section id="2" class="tilt tilt-14 tiltbg_white font_gray parallax2">
             <div class="pt200 pb160">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 font-b">各種ダウンロード</h2>
@@ -228,7 +229,7 @@
         </section>
         <!--実現する社会-->
         <section class="bg_cover bg_p_center" style="background-image: url(img/shibuya.jpg)">
-            <div class="mt-100 pt400 pb400">
+            <div class="mt-400 pt400 pb400">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b">実現する社会</h2>
                 </div>
