@@ -425,7 +425,6 @@ header {
 .tiltbg_katana:before {
     background-image: url(../img/katana2.jpg);
     background-position: center;
-
 }
 
 .tiltbg_shibuya:before {
@@ -561,15 +560,16 @@ a:hover {
     min-height: 100%;
     margin: 0 -100%;
     padding-bottom: 650px;
-    -webkit-transform-origin: 50% 50;
-    -ms-transform-origin: 50% 50;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    z-index: -1;
+}
+.tilt-14:before{
     -webkit-transform: rotate(-14deg);
     -ms-transform: rotate(-14deg);
     transform: rotate(-14deg);
-    z-index: -1;
 }
-
 .scroll {
     overflow-x: scroll;
     white-space: nowrap;
@@ -579,7 +579,9 @@ a:hover {
 .top0 {
     top: 0;
 }
-
+.z-10{
+    z-index: -10;
+}
 /*
 .circle {
     background-image: url("../img/circle.svg");

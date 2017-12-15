@@ -28,7 +28,6 @@
         $(function() {
             flexibility(document.documentElement);
         });
-
     </script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -47,7 +46,6 @@
                 autoplaySpeed: 10000,
             });
         });
-
     </script>
     <script type="text/javascript">
         $(function() {
@@ -65,7 +63,6 @@
                 return false;
             });
         });
-
     </script>
     <script type="text/javascript">
         $(function() {
@@ -76,23 +73,22 @@
                 $('.ddmenu_child').slideUp(150);
             });
         });
-
     </script>
     <script type="text/javascript" src="js/jquery.csv2table-0.02-b-4.8.js"></script>
     <script type="text/javascript">
         $(function() {
             $('#table_disp').csv2table('hashrate.csv');
         });
-
     </script>
     <script type="text/javascript">
-        $(function() {
-            $(window).scroll(function() {
-                var y = $(this).scrollTop();
-                $("#katana").css('top', y / 2);
-            });
+        $(window).scroll(function(e) {
+            parallax();
         });
 
+        function parallax() {
+            var scrolled = $(window).scrollTop();
+            $('.parallax').css('top', -(scrolled * 0.5) + 'px');
+        }
     </script>
 </head>
 
@@ -161,15 +157,15 @@
     </header>
     <main class="w1k over_hidden">
         <section id="1" class="top0 w100per h680 l-flex l-flex_js_c bg_cover" style="background-image: url(img/samurai2.jpg)"><img class="h210 mt160" src="img/bitzeny_logo.svg" alt="BitZeny"></section>
-        <section class="tilt tiltbg_white font_gray">
-            <div class="w100per pt120 pb200 l-flex l-flex_ai_c l-flex_js_c">
+        <section class="parallax tilt tilt-14 tiltbg_white font_gray">
+            <div class="w100per pt120 l-flex l-flex_ai_c l-flex_js_c">
                 <h2 class="p16 mt160 l-t_c font-b font-l"><span class="l-iblock">己を磨け、</span><span class="l-iblock">さらば与えられん。</span></h2>
             </div>
         </section>
         <!--刀-->
-        <section class="mt-100 h1k bg_p_center bg_cover" style="background-image: url(img/katana2.jpg)"></section>
+        <div id="katana" class="h1k bg_p_center bg_cover tiltbg_katana tilt z-10"></div>
         <!--説明-->
-        <section class="tilt tiltbg_gray">
+        <section class="tilt tilt-14 tiltbg_gray">
             <div class="pt200 pb200">
                 <div class="w100per mb32">
                     <h1 class="l-t_c m16 bg_p_center font-b"><span class="l-iblock">日本生まれの</span><span class="l-iblock">暗号通貨</span></h1>
@@ -200,7 +196,7 @@
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b"><span class="l-iblock">活発なコミュニティ</span></h2>
                 </div>
-                <div class="pb160 w100per l-flex l-flex_js_c flex_wrap">
+                <div class="pb160 w100per l-flex l-flex_js_c">
                     <div class="l-t_c plr8">
                         <p><span class="l-iblock">BitZenyフォーラムでは連日、</span><span class="l-iblock">「銭侍」達によって</span>
                             <br><span class="l-iblock">様々な議論がなされています。</span>
@@ -215,7 +211,7 @@
             </div>
         </section>
         <!--ダウンロード-->
-        <section id="2" class="tilt tiltbg_white font_gray">
+        <section id="2" class="tilt tilt-14 tiltbg_white font_gray">
             <div class="pt200 pb160">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 font-b">各種ダウンロード</h2>
@@ -250,7 +246,7 @@
             </div>
         </section>
         <!--技術仕様-->
-        <section id="3" class="tilt tiltbg_navy">
+        <section id="3" class="tilt tilt-14 tiltbg_navy">
             <div class="pt120 pb200">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b">技術情報</h2>
@@ -288,7 +284,7 @@
             </div>
         </section>
         <!--リンク-->
-        <section id="4" class="tilt tiltbg_white font_gray">
+        <section id="4" class="tilt tilt-14 tiltbg_white font_gray">
             <div class="pt120 pb160">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b">リンク</h2>
@@ -335,7 +331,7 @@
             </div>
         </section>
         <!--フッター-->
-        <footer class="tilt m0a font-sans tiltbg_gray">
+        <footer class="tilt tilt-14 m0a font-sans tiltbg_gray">
             <div class="w300 pt200 pb100 m0a l-t_c">
                 <div class="l-flex l-flex_js_sb"> <a class="mb8 font-s2 font_white m8" href="https://github.com/BitzenyCoreDevelopers" target="_blank">GitHub</a> <a class="mb8 font-s2 font_white m8" href="https://bitcointalk.org/index.php?topic=849994.0" target="_blank">Bitcoin Forum</a> <a class="mb8 font-s2 font_white m8" href="http://bitzeny.cswiki.jp/" target="_blank">Wiki</a> </div>
             </div>
