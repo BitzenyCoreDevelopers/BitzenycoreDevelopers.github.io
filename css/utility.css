@@ -300,6 +300,24 @@ header {
     border-top: 1px solid #aaa;
 }
 
+tr:nth-child(1) th {
+    background-color: #212552!important;
+}
+
+tr:nth-child(even) td {
+    background: #151b35!important;
+}
+
+tr:nth-child(odd) td {
+    background: #1f253f!important;
+}
+
+th,
+td {
+    padding: 8px!important;
+    border-color: #0a0f2c!important;
+}
+
 /*■個別調整■*/
 
 .bg_cover {
