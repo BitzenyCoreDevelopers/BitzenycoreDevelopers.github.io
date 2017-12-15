@@ -8,36 +8,16 @@
     width: 100%;
 }
 
-.w60per {
-    max-width: 60%;
-}
-
-.w66per {
-    width: 66.6%;
-}
-
 .w50per2 {
     width: 50%;
-}
-
-.w40per {
-    width: 40%;
 }
 
 .w33per {
     width: 33.3%;
 }
 
-.c_w100per div {
-    width: 100%;
-}
-
 .w1k {
     max-width: 1024px;
-}
-
-.w2k {
-    max-width: 2000px;
 }
 
 .w800 {
@@ -60,16 +40,8 @@
     height: 100%;
 }
 
-.h40per {
-    height: 40%;
-}
-
 .h1k {
     height: 1000px;
-}
-
-.h800 {
-    height: 800px;
 }
 
 .h680 {
@@ -80,30 +52,9 @@
     height: 500px;
 }
 
-.h500 {
-    height: 500px;
-}
-
-.h400 {
-    height: 400px;
-}
-
-.h300 {
-    height: 300px;
-}
-
-.h260 {
-    height: 260px;
-}
-
 .h210 {
     height: 210px;
 }
-
-.h160 {
-    height: 160px;
-}
-
 
 .h48 {
     height: 48px;
@@ -111,10 +62,6 @@
 
 .h8 {
     height: 8px;
-}
-
-.h100vh {
-    height: 100vh;
 }
 
 .block {
@@ -152,28 +99,9 @@ header {
     margin-right: 4px;
 }
 
-.slider {
-    display: block;
-}
-
-.slider_sp {
-    top: 0;
-    display: none!important;
-    overflow-x: hidden;
-}
-
 
 
 /*■レスポンシブ■*/
-
-@media screen and (max-width: 1199px) {
-    .slider {
-        display: none!important;
-    }
-    .slider_sp {
-        display: block!important;
-    }
-}
 
 @media screen and (max-width: 720px) {
     .pc_menu {
@@ -185,18 +113,12 @@ header {
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
-    .w60per {
-        min-width: 50%;
-    }
     .w33per {
         min-width: 50%;
     }
 }
 
 @media screen and (max-width: 599px) {
-    .w60per,
-    .w50per,
-    .w40per,
     .w33per {
         min-width: 100%;
     }
