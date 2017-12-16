@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。" />
+    <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
+
     <meta property="og:locale" content="ja_JP">
     <meta property="og:type" content="article">
     <meta property="og:url" content="">
@@ -12,43 +14,24 @@
     <meta property="og:site_name" content="BitZeny Project">
     <meta property="og:title" content="BitZeny Project">
     <meta property="og:description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。">
+
     <title>BitZeny Project</title>
-    <meta name="description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。" />
-    <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
+
     <link rel="icon" href="img/bitzeny.ico">
-    <link rel="stylesheet" href="css/minireset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" integrity="sha256-5Co4VU8G29ti556RmwtiyF2G2De1jHI3XnJh66vGpRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/object.css">
     <link rel="stylesheet" href="css/utility.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/flexibility.js"></script>
-    <script type="text/javascript">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" integrity="sha256-ETXu4iIohKzvSucuk6Bv0DCdqiqaTTGeMsjZ72szPzM=" crossorigin="anonymous"></script>
+    <script src="js/jquery.csv2table-0.02-b-4.8.js"></script>
+    <script>
         $(function() {
             flexibility(document.documentElement);
-        });
-    </script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/sns_button_simple.min.css">
-    <script type="text/javascript">
-        $(function() {
-            $('.slide').slick({
-                pauseOnFocus: true,
-                pauseOnHover: true,
-                draggable: true,
-                infinite: true,
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 10000,
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        $(function() {
+
             $('a[href^="#menu"]').click(function() {
                 return false;
             });
@@ -62,34 +45,22 @@
                 }, speed, "swing");
                 return false;
             });
-        });
-    </script>
-    <script type="text/javascript">
-        $(function() {
+
             $('.parent').click(function() {
                 $('.ddmenu_child').slideDown(150);
             });
             $('.ddmenu_child a, main').click(function() {
                 $('.ddmenu_child').slideUp(150);
             });
-        });
-    </script>
-    <script type="text/javascript" src="js/jquery.csv2table-0.02-b-4.8.js"></script>
-    <script type="text/javascript">
-        $(function() {
+
             $('#table_disp').csv2table('hashrate.csv');
         });
-    </script>
-    <script type="text/javascript">
-        $(window).scroll(function(e) {
-            parallax();
-        });
 
-        function parallax() {
+        $(window).scroll(function(e) {
             var scrolled = $(window).scrollTop();
             $('.parallax').css('top', -(scrolled * 0.5) + 'px');
             $('.parallax2').css('top', 1080 -(scrolled * 0.4) + 'px');
-        }
+        });
     </script>
 </head>
 
@@ -340,5 +311,4 @@
         </footer>
     </main>
 </body>
-
 </html>
