@@ -41,7 +41,7 @@
 }
 
 .h1k {
-    height: 1000px;
+    height: 1120px;
 }
 
 .h680 {
@@ -72,7 +72,7 @@
 /*■パーツ■*/
 
 header {
-    min-height: 48px;
+    min-height: 50px;
 }
 
 .menu > * {
@@ -81,9 +81,9 @@ header {
 }
 
 .ddmenu a {
-    padding: 6px 10px 10px;
-
+    padding:  12px 0 12px 22px;
 }
+
 
 .sp_menu {
     display: none;
@@ -95,11 +95,10 @@ header {
 }
 
 .logo {
-    height: 24px;
-    margin-right: 4px;
+    height: 26px;
+    width:26px;
+    margin:0px 8px 0 0px;
 }
-
-
 
 /*■レスポンシブ■*/
 

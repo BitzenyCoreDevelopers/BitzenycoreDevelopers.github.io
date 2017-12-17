@@ -2,7 +2,7 @@
 
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);*/
 
 /*■本文■*/
 
@@ -15,9 +15,18 @@
     outline: none;
 }
 
+@font-face {
+   font-family: 'Noto Serif Japanese';
+   font-weight: 600;
+   font-style: normal;
+   src: url(fonts/NotoSerifCJKjp-SemiBold.otf) format('opentype');
+ }
+ 
 body {
     height: 100%;
     width: 100%;
     margin: auto;
-    font-family: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+    font-family: "Noto Serif Japanese",Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+    -webkit-font-smoothing: antialiased;
 }
+

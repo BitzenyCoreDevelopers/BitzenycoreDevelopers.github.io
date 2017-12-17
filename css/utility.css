@@ -24,8 +24,7 @@ p {
 }
 
 .font-sans {
-    font-family: 'Noto Sans Japanese';
-    font-weight: 200;
+    font-family: "Helvetica","Hiragino Kaku Gothic ProN",メイリオ,Meiryo,"游ゴシック Medium",YuGothic,YuGothicM,sans-serif;
 }
 
 a:link,
@@ -47,15 +46,16 @@ h2 {
 }
 
 .font-s2 {
-    font-size: 80%;
+    font-size: 70%;
+    line-height:1.5em;
 }
 
 .font-l {
-    font-size: 2.6rem;
+    font-size: 2.9rem;
 }
 
 .font-b {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /*■margin■*/
@@ -70,6 +70,13 @@ h2 {
 
 .m16 {
     margin: 16px;
+}
+
+.m24 {
+    margin: 24px;
+}
+.mt85 {
+    margin-top: 85px;
 }
 
 .mt160 {
@@ -149,17 +156,13 @@ h2 {
 .menu * {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    margin-top: -1px;
     font-size: 80%;
 }
 
@@ -170,22 +173,19 @@ h2 {
 .ddmenu {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-
     font-size: 80%;
 }
 
 ul.ddmenu a {
     display: block;
+    padding:11px 20px 7px 22px;
 }
 
 ul.ddmenu ul {
@@ -198,7 +198,7 @@ ul.ddmenu ul li a {
 }
 
 .pc_menu ul.ddmenu ul li a {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .scrollbar {
@@ -226,7 +226,7 @@ span {
 /*■色■*/
 
 .theme_dark {
-    background: #0c0d0c;
+    background: #202125;
     color: #eeedeb;
 }
 
@@ -239,13 +239,16 @@ h2 {
 h3 {
     overflow: hidden;
     text-align: center;
-    font-weight: 500;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin: 8px;
+    font-size:18px;
+    height:26px;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
 }
+
 
 .menu a,
 .ddmenu a {
@@ -269,12 +272,12 @@ header {
 }
 
 .font_white {
-    color: #FFF!important;
+    color: #EEEDEB!important;
 
 }
 
 .font_gray {
-    color: #161716!important;
+    color: #18181B!important;
 }
 
 .tiltbg_white:before {
@@ -286,20 +289,37 @@ header {
 }
 
 .tiltbg_navy:before {
-    background: #0a0f2c;
+    background: #0B0F2C;
+
 }
 
 .tiltbg_katana:before {
     background-image: url(../img/katana2.jpg);
-    background-position: center;
+    background-position: center 80px; 
+}
+
+.tiltbg_society:before {
+    background-image: url(../img/shibuya.jpg);
+    background-position: center; 
+    margin-top:-400px;
 }
 
 .border_b {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 2px solid #54576B;
 }
 
 .border_t {
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #54576B;
+}
+
+.t-name{
+    font-weight:bold;
+    font-size:90%;
+    padding: 16px 0px 2px 8px;
+}
+.t-val{
+    font-size:90%;
+    padding: 16px 0px 2px 8px;
 }
 
 tr:nth-child(1) th {
@@ -341,7 +361,7 @@ td {
 
 .iconize-square {
     text-align: center;
-    padding: 4px 32px 6px;
+    padding: 6px 6px;
     border-radius: 4px;
     display: inline-block;
 }
@@ -355,7 +375,7 @@ td {
 
 .iconize-round2 {
     text-align: center;
-    padding: 4px 32px 5px;
+    padding: 6px 32px 5px;
     border-radius: 32px;
     display: inline-block;
 }
@@ -363,7 +383,6 @@ td {
 a:hover {
     opacity: 0.6;
     -webkit-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
 
@@ -380,17 +399,28 @@ a:hover {
     left: 0;
     min-width: 320%;
     min-height: 100%;
-    margin: 0 -100%;
-    padding-bottom: 650px;
+    margin: 0 -110%;
+    padding-bottom: 480px;
     -webkit-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    z-index: -1;
+}
+
+.tilt:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    min-width: 320%;
+    min-height: 100%;
+    margin: 0 -110%;
+    padding-bottom: 480px;
+    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     z-index: -1;
 }
 
 .tilt-14:before {
     -webkit-transform: rotate(-14deg);
-    -ms-transform: rotate(-14deg);
     transform: rotate(-14deg);
 }
 
@@ -400,4 +430,8 @@ a:hover {
 
 .z-10 {
     z-index: -10;
+}
+.footer{
+    padding-bottom: 100px;
+    margin-bottom: -880px;
 }
