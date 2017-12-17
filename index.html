@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。" />
+    <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
+
     <meta property="og:locale" content="ja_JP">
     <meta property="og:type" content="article">
     <meta property="og:url" content="">
@@ -12,45 +15,24 @@
     <meta property="og:site_name" content="BitZeny Project">
     <meta property="og:title" content="BitZeny Project">
     <meta property="og:description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。">
+
     <title>BitZeny Project</title>
-    <meta name="description" content="BitZenyはデバイスを選ばない共有システムをもつ。それはかつてない感動と、これまでにない価値をあなたに与えてくれるだろう。" />
-    <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
+
     <link rel="icon" href="img/bitzeny.ico">
-    <link rel="stylesheet" href="css/minireset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" integrity="sha256-5Co4VU8G29ti556RmwtiyF2G2De1jHI3XnJh66vGpRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/object.css">
     <link rel="stylesheet" href="css/utility.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/flexibility.js"></script>
-    <script type="text/javascript">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" integrity="sha256-ETXu4iIohKzvSucuk6Bv0DCdqiqaTTGeMsjZ72szPzM=" crossorigin="anonymous"></script>
+    <script src="js/jquery.csv2table-0.02-b-4.8.js"></script>
+    <script>
         $(function() {
             flexibility(document.documentElement);
-        });
 
-    </script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/sns_button_simple.min.css">
-    <script type="text/javascript">
-        $(function() {
-            $('.slide').slick({
-                pauseOnFocus: true,
-                pauseOnHover: true,
-                draggable: true,
-                infinite: true,
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 10000,
-            });
-        });
-
-    </script>
-    <script type="text/javascript">
-        $(function() {
             $('a[href^="#menu"]').click(function() {
                 return false;
             });
@@ -64,33 +46,21 @@
                 }, speed, "swing");
                 return false;
             });
-        });
 
-    </script>
-    <script type="text/javascript">
-        $(function() {
             $('.parent').click(function() {
                 $('.ddmenu_child').slideDown(150);
             });
             $('.ddmenu_child a, main').click(function() {
                 $('.ddmenu_child').slideUp(150);
             });
-        });
 
-    </script>
-    <script type="text/javascript" src="js/jquery.csv2table-0.02-b-4.8.js"></script>
-    <script type="text/javascript">
-        $(function() {
             $('#table_disp').csv2table('hashrate.csv');
         });
 
-    </script>
-    <script type="text/javascript">
-        $(function() {
-            $(window).scroll(function() {
-                var y = $(this).scrollTop();
-                $("#katana").css('top', y / 2);
-            });
+        $(window).scroll(function(e) {
+            var scrolled = $(window).scrollTop();
+            $('.parallax').css('top', 1080  -(scrolled * 0.5) + 'px');
+            $('.parallax2').css('top', 1080 - (scrolled * 0.4) + 'px');
         });
 
     </script>
@@ -160,16 +130,18 @@
         </div>
     </header>
     <main class="w1k over_hidden">
+        <!--key visual-->
         <section id="1" class="top0 w100per h680 l-flex l-flex_js_c bg_cover" style="background-image: url(img/samurai2.jpg)"><img class="h210 mt160" src="img/bitzeny_logo.svg" alt="BitZeny"></section>
-        <section class="tilt tiltbg_white font_gray">
-            <div class="w100per pt120 pb200 l-flex l-flex_ai_c l-flex_js_c">
-                <h2 class="p16 mt160 l-t_c font-b font-l"><span class="l-iblock">己を磨け、</span><span class="l-iblock">さらば与えられん。</span></h2>
+        <!--key message-->
+        <section class="tilt tilt-14 tiltbg_white font_gray parallax1">
+            <div class="w100per pt120 l-flex l-flex_ai_c l-flex_js_c">
+                <h2 class="p16 mt85 l-t_c font-b font-l"><span class="l-iblock">己を磨け、</span><span class="l-iblock">さらば与えられん。</span></h2>
             </div>
         </section>
         <!--刀-->
-        <section class="mt-100 h1k bg_p_center bg_cover" style="background-image: url(img/katana2.jpg)"></section>
+        <div id="katana" class="h1k bg_p_center bg_cover tiltbg_katana tilt z-10"></div>
         <!--説明-->
-        <section class="tilt tiltbg_gray">
+        <section class="tilt tilt-14 tiltbg_gray parallax1">
             <div class="pt200 pb200">
                 <div class="w100per mb32">
                     <h1 class="l-t_c m16 bg_p_center font-b"><span class="l-iblock">日本生まれの</span><span class="l-iblock">暗号通貨</span></h1>
@@ -179,10 +151,10 @@
                         <p><span class="l-iblock">Zeny＝銭であり、かつて江戸時代まで</span>
                             <br><span class="l-iblock">用いられていた「銭貨」を指します。</span>
                             <br><span class="l-iblock">
-                        BitZenyは</span><span class="l-iblock">江戸の町を闊歩していた侍や、</span>
+                                BitZenyは</span><span class="l-iblock">江戸の町を闊歩していた侍や、</span>
                             <br><span class="l-iblock">その魂である刀を</span><span class="l-iblock">モチーフにしたコインです。</span>
                             <br><span class="l-iblock">
-                        つまりあなたはこれを手にし、</span><span class="l-iblock">侍になるのです。</span></p>
+                                つまりあなたはこれを手にし、</span><span class="l-iblock">侍になるのです。</span></p>
                     </div>
                 </div>
                 <div class="w100per mb32">
@@ -193,32 +165,32 @@
                         <p><span class="l-iblock">Yescryptアルゴリズムによって</span><span class="l-iblock">「採掘するため、</span>
                             <br><span class="l-iblock">特別な装置は必要ありません。</span>
                             <br><span class="l-iblock">
-                        あなたがお持ちの</span><span class="l-iblock">PC・スマートフォンで</span>
+                                あなたがお持ちの</span><span class="l-iblock">PC・スマートフォンで</span>
                             <br><span class="l-iblock">マイニングが可能です。</span></p>
                     </div>
                 </div>
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b"><span class="l-iblock">活発なコミュニティ</span></h2>
                 </div>
-                <div class="pb160 w100per l-flex l-flex_js_c flex_wrap">
+                <div class="pb160 w100per l-flex l-flex_js_c">
                     <div class="l-t_c plr8">
                         <p><span class="l-iblock">BitZenyフォーラムでは連日、</span><span class="l-iblock">「銭侍」達によって</span>
                             <br><span class="l-iblock">様々な議論がなされています。</span>
                             <br><span class="l-iblock">
-                        機能・サービスが</span><span class="l-iblock">検討・開発されるだけでなく、</span>
+                                機能・サービスが</span><span class="l-iblock">検討・開発されるだけでなく、</span>
                             <br><span class="l-iblock">そこからイメージキャラクターである</span><span class="l-iblock">「ぜにぃ姫」や</span>
                             <br><span class="l-iblock">オリジナルグッズも</span><span class="l-iblock">生み出されました。</span>
                             <br><span class="l-iblock">
-                        あなたの一言・行動が、</span><span class="l-iblock">BitZenyの未来を作ります。</span></p>
+                                あなたの一言・行動が、</span><span class="l-iblock">BitZenyの未来を作ります。</span></p>
                     </div>
                 </div>
             </div>
         </section>
         <!--ダウンロード-->
-        <section id="2" class="tilt tiltbg_white font_gray">
+        <section id="2" class="tilt tilt-14 tiltbg_white font_gray parallax1">
             <div class="pt200 pb160">
                 <div class="w100per mb32">
-                    <h2 class="l-t_c m16 font-b">各種ダウンロード</h2>
+                    <h2 class="l-t_c m16 font-b">Downloads</h2>
                 </div>
                 <div class="w100per l-flex l-flex_js_c flex_wrap">
                     <div class="w100per l-flex l-flex_js_c l-flex_wrap">
@@ -231,8 +203,8 @@
             </div>
         </section>
         <!--実現する社会-->
-        <section class="bg_cover bg_p_center" style="background-image: url(img/shibuya.jpg)">
-            <div class="mt-100 pt400 pb400">
+        <section class="bg_cover bg_p_center tiltbg_society tilt z-10 parallax1 parallax2">
+            <div class="pt400 pb400">
                 <div class="w100per mb32">
                     <h2 class="l-t_c m16 bg_p_center font-b">実現する社会</h2>
                 </div>
@@ -240,46 +212,46 @@
                     <div class="l-t_c plr8">
                         <p><span class="l-iblock">CPU採掘が</span><span class="l-iblock">経済的インフラストラクチャの</span><span class="l-iblock">根幹を担うことで</span>
                             <br><span class="l-iblock">
-                        ベーシックインカムの</span><span class="l-iblock">役割を果たす。</span>
+                                ベーシックインカムの</span><span class="l-iblock">役割を果たす。</span>
                             <br><span class="l-iblock">
-                        さらにBitZenyが</span><span class="l-iblock">世界の流通において機能し、</span>
+                                さらにBitZenyが</span><span class="l-iblock">世界の流通において機能し、</span>
                             <br><span class="l-iblock">
-                        弱者のセーフティネット</span><span class="l-iblock">となる社会を目指す。</span></p>
+                                弱者のセーフティネット</span><span class="l-iblock">となる社会を目指す。</span></p>
                     </div>
                 </div>
             </div>
         </section>
         <!--技術仕様-->
-        <section id="3" class="tilt tiltbg_navy">
-            <div class="pt120 pb200">
+        <section id="3" class="tilt tilt-14 tiltbg_navy parallax1">
+            <div class="pt200 pb200">
                 <div class="w100per mb32">
-                    <h2 class="l-t_c m16 bg_p_center font-b">技術情報</h2>
+                    <h2 class="l-t_c m16 bg_p_center font-b">Technical Information</h2>
                 </div>
                 <div class="w100per l-flex l-flex_js_c flex_wrap">
                     <div class="w600 l-flex l-flex_js_c l-flex_wrap p16 font-sans">
-                        <div class="w50per2 p8 border_b">シンボル</div>
-                        <div class="w50per2 p8 border_b">ZNY</div>
-                        <div class="w50per2 p8 border_b">アルゴリズム</div>
-                        <div class="w50per2 p8 border_b">Yescrypt (BitZeny版)</div>
-                        <div class="w50per2 p8 border_b">最大発行枚数</div>
-                        <div class="w50per2 p8 border_b">250,000,000枚</div>
-                        <div class="w50per2 p8 border_b">プレマイン</div>
-                        <div class="w50per2 p8 border_b">0</div>
-                        <div class="w50per2 p8 border_b">難易度</div>
-                        <div class="w50per2 p8 border_b">DarkGravityWave3</div>
-                        <div class="w50per2 p8 border_b">ブロック発見報酬</div>
-                        <div class="w50per2 p8 border_b">62.5枚</div>
-                        <div class="w50per2 p8 border_b">半減周期</div>
-                        <div class="w50per2 p8 border_b">500,000ブロックごと</div>
-                        <div class="w50per2 p8 border_b">ポート</div>
-                        <div class="w50per2 p8 border_b">9253</div>
-                        <div class="w50per2 p8 border_b">RPCポート</div>
-                        <div class="w50per2 p8 border_b">9252</div>
+                        <div class="w50per2  border_b t-name">シンボル</div>
+                        <div class="w50per2  border_b t-val">ZNY</div>
+                        <div class="w50per2  border_b t-name">アルゴリズム</div>
+                        <div class="w50per2  border_b t-val">Yescrypt (BitZeny版)</div>
+                        <div class="w50per2  border_b t-name">最大発行枚数</div>
+                        <div class="w50per2  border_b t-val">250,000,000枚</div>
+                        <div class="w50per2  border_b t-name">プレマイン</div>
+                        <div class="w50per2  border_b t-val">0</div>
+                        <div class="w50per2  border_b t-name">難易度</div>
+                        <div class="w50per2  border_b t-val">DarkGravityWave3</div>
+                        <div class="w50per2  border_b t-name">ブロック発見報酬</div>
+                        <div class="w50per2  border_b t-val">62.5枚</div>
+                        <div class="w50per2  border_b t-name">半減周期</div>
+                        <div class="w50per2  border_b t-val">500,000ブロックごと</div>
+                        <div class="w50per2  border_b t-name">ポート</div>
+                        <div class="w50per2  border_b t-val">9253</div>
+                        <div class="w50per2  border_b t-name">RPCポート</div>
+                        <div class="w50per2  border_b t-val">9252</div>
                     </div>
                 </div>
-                <div class="pt120 pb160">
+                <div class="pt200 pb200">
                     <div class="w100per mb32">
-                        <h2 class="l-t_c m16 bg_p_center font-b">ハッシュレート</h2>
+                        <h2 class="l-t_c m16 bg_p_center font-b">Hash Rates</h2>
                     </div>
                     <div class=" w100per l-flex l-flex_js_c flex_wrap">
                         <div id="table_disp" class="w800 h600 p16 font-sans scrollbar"> </div>
@@ -288,56 +260,56 @@
             </div>
         </section>
         <!--リンク-->
-        <section id="4" class="tilt tiltbg_white font_gray">
+        <section id="4" class="tilt tilt-14 tiltbg_white font_gray parallax1">
             <div class="pt120 pb160">
                 <div class="w100per mb32">
-                    <h2 class="l-t_c m16 bg_p_center font-b">リンク</h2>
+                    <h2 class="l-t_c m16 bg_p_center font-b">Links</h2>
                 </div>
                 <div class="pb100 w100per l-flex l-flex_js_c flex_wrap">
                     <div class="w1k p16 l-flex l-flex_js_c l-flex_wrap font-sans">
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>BitZenyフォーラム</h3> <a href="https://twitter.com/MCPE_Yossi1114" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのあれこれについて話し合っているコミュニティーフォーラムです。Webサービスから取引所、ウォレットやコインの仕様について話し合っています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="https://bitzeny.info/" target="_blank">BitZenyフォーラム</a> </div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>BitZenyフォーラム</h3> <a href="https://twitter.com/MCPE_Yossi1114" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのあれこれについて話し合っているコミュニティーフォーラムです。Webサービスから取引所、ウォレットやコインの仕様について話し合っています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="https://bitzeny.info/" target="_blank">BitZenyフォーラム</a> </div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>暗号通貨BitZenyまとめWiki</h3> <a href="#" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZeny関連のニュースや導入方法をはじめ、企画・コミュニティ・技術者向け情報などを総合的に発信しています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="http://bitzeny.cswiki.jp/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>暗号通貨BitZenyまとめWiki</h3> <a href="#" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZeny関連のニュースや導入方法をはじめ、企画・コミュニティ・技術者向け情報などを総合的に発信しています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="http://bitzeny.cswiki.jp/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>Telegram BitZeny Japan</h3> <a href="#" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">チャットツールTelegramのビットゼニーチャンネルです。主に雑談の場となっています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="https://t.me/joinchat/EmaWHQ135_r0gga2E91jBQ" target="_blank">Telegram BitZeny Japan</a></div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>Telegram BitZeny Japan</h3> <a href="#" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">チャットツールTelegramのビットゼニーチャンネルです。主に雑談の場となっています。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="https://t.me/joinchat/EmaWHQ135_r0gga2E91jBQ" target="_blank">Telegram BitZeny Japan</a></div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>CryptoBridge</h3> <a href="https://twitter.com/cryptobridge" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZenyをBTCやMONAで購入できる分散型取引所(DEX)です。メールアドレスとパスワードのみで利用できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="https://crypto-bridge.org/" target="_blank">CryptoBridge</a></div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>CryptoBridge</h3> <a href="https://twitter.com/cryptobridge" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZenyをBTCやMONAで購入できる分散型取引所(DEX)です。メールアドレスとパスワードのみで利用できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="https://crypto-bridge.org/" target="_blank">CryptoBridge</a></div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">BitZeny Block Explorer</a></div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">BitZeny Block Explorer</a></div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>BitZeny版insight</h3> <a href="#" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">BitZeny版insight</a></div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>BitZeny版insight</h3> <a href="#" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">BitZeny版insight</a></div>
                         </div>
                         <div class="w33per mb32">
-                            <div class="l-t_c h100per tag bg_gray font_gray m16">
-                                <h3>BitZeny Online Wallet</h3> <a href="https://twitter.com/zenywallet" class="color1 mb8 iconize-round2 font_white font-s2" target="_blank">管理者</a>
-                                <p class="p8 mb16 font-s2 lh1_5">BitZeny Online Walletは、お持ちのコンピューターにウォレットをダウンロードすることなく自分のウォレットを持てるサービスです。</p> <a class="w100per color2 mb8 iconize-square font-s2 font_white" href="https://bitzeny.jp/" target="_blank">BitZeny Online Wallet</a> </div>
+                            <div class="l-t_c h100per tag bg_gray font_gray m24">
+                                <h3>BitZeny Online Wallet</h3> <a href="https://twitter.com/zenywallet" class="color1 m8 font-b iconize-round2 font_white font-s2" target="_blank">管理者</a>
+                                <p class="p8 mb16 font-s2 lh1_5">BitZeny Online Walletは、お持ちのコンピューターにウォレットをダウンロードすることなく自分のウォレットを持てるサービスです。</p> <a class="w100per color2 mb8 iconize-square font-s2 font-b font_white" href="https://bitzeny.jp/" target="_blank">BitZeny Online Wallet</a> </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--フッター-->
-        <footer class="tilt m0a font-sans tiltbg_gray">
+        <footer class="tilt tilt-14 m0a font-sans tiltbg_gray footer parallax1">
             <div class="w300 pt200 pb100 m0a l-t_c">
-                <div class="l-flex l-flex_js_sb"> <a class="mb8 font-s2 font_white m8" href="https://github.com/BitzenyCoreDevelopers" target="_blank">GitHub</a> <a class="mb8 font-s2 font_white m8" href="https://bitcointalk.org/index.php?topic=849994.0" target="_blank">Bitcoin Forum</a> <a class="mb8 font-s2 font_white m8" href="http://bitzeny.cswiki.jp/" target="_blank">Wiki</a> </div>
+                <div class="l-flex l-flex_js_sb font-b"> <a class="mb8 font-s2 font_white m8" href="https://github.com/BitzenyCoreDevelopers" target="_blank">GitHub</a> <a class="mb8 font-s2 font_white m8" href="https://bitcointalk.org/index.php?topic=849994.0" target="_blank">Bitcoin Forum</a> <a class="mb8 font-s2 font_white m8" href="http://bitzeny.cswiki.jp/" target="_blank">Wiki</a> </div>
             </div>
             <p class="w100per pb100 l-t_c font-s2">Copyright © 2017 BitZeny Project. All Rights Reserved.</p>
         </footer>
