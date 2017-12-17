@@ -71,6 +71,7 @@ h2 {
 .m16 {
     margin: 16px;
 }
+
 .m24 {
     margin: 24px;
 }
@@ -98,12 +99,6 @@ h2 {
 
 .mb32 {
     margin-bottom: 32px;
-}
-
-
-
-.pt1{
-    padding-top :10px;
 }
 
 .p8 {
@@ -295,6 +290,7 @@ header {
 
 .tiltbg_navy:before {
     background: #0B0F2C;
+
 }
 
 .tiltbg_katana:before {
@@ -307,7 +303,6 @@ header {
     background-position: center; 
     margin-top:-400px;
 }
-
 
 .border_b {
     border-bottom: 2px solid #54576B;
@@ -396,6 +391,19 @@ a:hover {
     margin-top: -150px;
     padding: 0;
     z-index: 10;
+}
+
+.tilt:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    min-width: 320%;
+    min-height: 100%;
+    margin: 0 -110%;
+    padding-bottom: 480px;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    z-index: -1;
 }
 
 .tilt:before {
