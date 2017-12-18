@@ -5,21 +5,18 @@
 .l-flex {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     -ms-flex-pack: distribute;
 }
 
 .l-flex_js_sb {
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .l-flex_js_c {
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
@@ -27,15 +24,20 @@
 .l-flex_ai_c {
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 }
 
 .l-flex_ai_t {
     -webkit-box-align: start;
-    -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+}
+
+.l-flex_d_c {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .l-t_c {
@@ -47,7 +49,6 @@
 }
 
 .l-flex_wrap {
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
