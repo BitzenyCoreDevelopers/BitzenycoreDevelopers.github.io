@@ -120,6 +120,10 @@ h2 {
     padding: 16px;
 }
 
+.pt0 {
+    padding-top: 0;
+}
+
 .pt14 {
     padding-top: 14px;
 }
@@ -138,6 +142,10 @@ h2 {
 
 .pt400 {
     padding-top: 400px;
+}
+
+.pb0 {
+    padding-bottom: 0px;
 }
 
 .pb16 {
@@ -432,10 +440,6 @@ a:hover {
 
 .top0 {
     top: 0;
-}
-
-.bottom12 {
-    bottom: 0px;
 }
 
 .z-10 {

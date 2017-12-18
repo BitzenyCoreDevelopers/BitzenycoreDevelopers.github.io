@@ -40,6 +40,10 @@
     height: 100%;
 }
 
+.h80per {
+    height: 80%;
+}
+
 .h1k {
     height: 1120px;
 }
@@ -81,7 +85,7 @@ header {
 }
 
 .ddmenu a {
-    padding:  12px 0 12px 22px;
+    padding: 12px 0 12px 22px;
 }
 
 
@@ -96,8 +100,12 @@ header {
 
 .logo {
     height: 26px;
-    width:26px;
-    margin:0px 8px 0 0px;
+    width: 26px;
+    margin: 0px 8px 0 0px;
+}
+
+.link_h {
+    height: 300px;
 }
 
 /*■レスポンシブ■*/
@@ -111,14 +119,20 @@ header {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 700px) and (max-width: 900px) {
     .w33per {
         min-width: 50%;
     }
+    .link_h {
+        height: 280px;
+    }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 699px) {
     .w33per {
         min-width: 100%;
+    }
+    .link_h {
+        height: 280px;
     }
 }
