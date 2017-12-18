@@ -295,7 +295,7 @@ header {
 
 .tiltbg_katana:before {
     background-image: url(../img/katana2.jpg);
-    background-position: center 80px; 
+    background-position: center 70px; 
 }
 
 .tiltbg_society:before {
@@ -314,11 +314,11 @@ header {
 
 .t-name{
     font-weight:bold;
-    font-size:90%;
+    font-size:83%;
     padding: 16px 0px 2px 8px;
 }
 .t-val{
-    font-size:90%;
+    font-size:83%;
     padding: 16px 0px 2px 8px;
 }
 
@@ -424,6 +424,23 @@ a:hover {
     transform: rotate(-14deg);
 }
 
+.symbol-img{
+    min-width:150px;
+    width:35vw;
+}
+.key-message{
+    font-size: calc(15px + 2.2vw);
+    line-height:160%;
+}
+
+.sec-title{
+    font-size: calc(16px + 1.8vw);
+}
+
+.sec-description{
+    font-size: calc(10px + 1vw);
+}
+
 .top0 {
     top: 0;
 }
@@ -433,5 +450,5 @@ a:hover {
 }
 .footer{
     padding-bottom: 100px;
-    margin-bottom: -880px;
+    margin-bottom: -1280px;
 }
