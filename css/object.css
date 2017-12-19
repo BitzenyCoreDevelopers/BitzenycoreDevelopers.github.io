@@ -2,137 +2,97 @@
 
 /* CSS Document */
 
-/*■共通部分■*/
+/*■width■*/
 
-.w100per {
+.o-w100per {
     width: 100%;
 }
 
-.w50per2 {
+.o-w50per {
     width: 50%;
 }
 
-.w33per {
+.o-w33per {
     width: 33.3%;
 }
 
-.w1k {
+.o-w1k {
     max-width: 1024px;
 }
 
-.w800 {
+.o-w800 {
     max-width: 800px;
 }
 
-.w600 {
+.o-w600 {
     width: 600px;
 }
 
-.w300 {
+.o-w300 {
     max-width: 300px;
 }
 
-.w100 {
+.o-w100 {
     width: 120px;
 }
 
-.h100per {
+/*■height■*/
+
+.o-h100per {
     height: 100%;
 }
 
-.h80per {
-    height: 80%;
-}
-
-.h1k {
+.o-h1k {
     height: 1120px;
 }
 
-.h680 {
+.o-h680 {
     height: 680px;
 }
 
-.h600 {
-    height: 500px;
+.o-h600 {
+    height: 600px;
 }
 
-.h210 {
+.o-h210 {
     height: 210px;
 }
 
-.h48 {
+.o-h48 {
     height: 48px;
 }
 
-.h8 {
+.o-h8 {
     height: 8px;
 }
 
-.block {
-    display: block;
-}
-
-
-/*■パーツ■*/
+/*■個別パーツ■*/
 
 header {
     min-height: 50px;
+    top: 0;
 }
 
-.menu > * {
-    padding: 10px 10px 12px;
-
-}
-
-.ddmenu a {
-    padding: 12px 0 12px 22px;
-}
-
-
-.sp_menu {
-    display: none;
-}
-
-.sp_menu a,
-.sp_menu li {
-    width: 100%;
-}
-
-.logo {
-    height: 26px;
-    width: 26px;
-    margin: 0px 8px 0 0px;
-}
-
-.link_h {
+.o-link_h {
     height: 300px;
 }
 
 /*■レスポンシブ■*/
 
-@media screen and (max-width: 720px) {
-    .pc_menu {
-        display: none;
-    }
-    .sp_menu {
-        display: block;
-    }
-}
-
 @media screen and (min-width: 700px) and (max-width: 900px) {
-    .w33per {
+    .o-w33per {
         min-width: 50%;
     }
-    .link_h {
+    .o-link_h {
         height: 280px;
     }
 }
 
 @media screen and (max-width: 699px) {
-    .w33per {
+    .o-w33per {
         min-width: 100%;
     }
-    .link_h {
+    .o-link_h {
         height: 280px;
     }
 }

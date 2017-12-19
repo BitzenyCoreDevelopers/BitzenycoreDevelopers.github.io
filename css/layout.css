@@ -2,50 +2,63 @@
 
 /* CSS Document */
 
-.l-flex {
+.l-flex_justify_sb {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-}
-
-.l-flex_js_sb {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
-.l-flex_js_c {
+.l-flex_justify_center {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
-.l-flex_ai_c {
+.l-flex_v_align_center {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 }
 
-.l-flex_ai_t {
+.l-flex_v_align_top {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
 }
 
-.l-flex_d_c {
+.l-flex_direction_center {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
-
-.l-t_c {
-    text-align: center;
-}
-
-.l-t_r {
-    text-align: right;
 }
 
 .l-flex_wrap {
@@ -53,9 +66,15 @@
     flex-wrap: wrap;
 }
 
+.l-text_center {
+    text-align: center;
+}
+
+.l-text_right {
+    text-align: right;
+}
+
 .l-fixed {
     position: fixed;
     z-index: 100;
 }
-
-/*■レスポンシブ■*/
