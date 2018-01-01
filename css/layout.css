@@ -61,6 +61,16 @@
     flex-direction: column;
 }
 
+.l-flex_direction_reverse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
 .l-flex_wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;

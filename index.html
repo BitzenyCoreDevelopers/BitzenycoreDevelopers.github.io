@@ -49,10 +49,27 @@
             });
 
             $('.js-parent').click(function() {
-                $('.js-ddmenu_child').slideDown(150);
+                $('.js-ddmenu_child').fadeIn(150);
+
             });
             $('.ddmenu_child a, main').click(function() {
-                $('.js-ddmenu_child').slideUp(150);
+                $('.js-ddmenu_child').fadeOut(150);
+            });
+
+            $('#js-nav-toggle').click(function() {
+                if ($('#js-nav-toggle').attr("class") == 'u-nav-toggle-btn close') {
+                    $('.u-nav-list').fadeIn();
+                    $(this).removeClass("close").addClass("open");
+                } else {
+                    $('.u-nav-list').fadeOut(function() {
+                        $('#js-nav-toggle').removeClass("open").addClass("close");
+                    });
+                }
+            });
+            $('.u-nav-list a,main').click(function() {
+                $('.u-nav-list').fadeOut(function() {
+                    $('#js-nav-toggle').removeClass("open").addClass("close");
+                });
             });
 
             $('#js-table_disp').csv2table('hashrate.csv');
@@ -64,14 +81,13 @@
             $('#js-parallax2').css('top', (scrolled / 6) - 40 + 'px');
             $('#js-parallax3').css('top', (scrolled * 0.2) - 740 + 'px');
         });
-
     </script>
 </head>
 
 <body class="l-flex_justify_center">
     <header class="l-fixed o-w100per u-font_sans">
         <!--PCメニュー-->
-        <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu">
+        <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu u-bg_black_trans">
             <div class="l-flex_justify_sb l-flex_v_align_center u-plr8 u-menu">
                 <a class=" l-flex_v_align_center" href="#1"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</a>
                 <a class="u-block l-text_center" href="#2">Downloads</a>
@@ -86,21 +102,21 @@
                         </div>
                     </a>
                     <ul class="js-ddmenu_child l-text_right">
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="/">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/jp.png">
                                     <p>Japanese</p>
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="en.html">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/us.png">
                                     <p>English</p>
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="nl.html">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/nl.png">
                                     <p>Dutch</p>
@@ -112,22 +128,20 @@
             </ul>
         </div>
         <!--SPメニュー-->
-        <div class="l-text_center l-flex_justify_sb l-flex_v_align_top o-w100per u-m0a u-sp_menu">
-            <ul class="u-ddmenu">
-                <li><a class="js-parent" style="cursor:default;"><span class="l-text_center l-flex_v_align_center l-flex_justify_center"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</span></a>
-                    <ul class="js-ddmenu_child u-border_top">
-                        <li class="u-pt14"><a class="l-text_center u-block" href="#1">Top</a></li>
-                        <li><a class="l-text_center u-block" href="#2">Downloads</a></li>
-                        <li><a class="l-text_center u-block" href="#3">Tech Info</a></li>
-                        <li><a class="l-text_center u-block" href="#4">Links</a></li>
-                        <li class="u-p16"><img class="o-h8" src="img/tri.svg"> Select Language</li>
-                        <li><a href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
-                        <li><a href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
-                        <li class="u-pb16"><a href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
-                    </ul>
-                </li>
+        <nav class="u-sp_menu">
+            <div class="l-flex_direction_reverse u-p16"><button id="js-nav-toggle" class="u-nav-toggle-btn close"></button></div>
+            <ul class="l-text_center u-nav-list u-bg_black_trans u-mt-48 u-pt48">
+                <li class="u-p16 u-border_bottom"><img class="o-h8" src="img/tri.svg"> Menu</li>
+                <li><a class="u-block" href="#1">Top</a></li>
+                <li><a class="u-block" href="#2">Downloads</a></li>
+                <li><a class="u-block" href="#3">Tech Info</a></li>
+                <li><a class="u-block" href="#4">Links</a></li>
+                <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
+                <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
+                <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
+                <li><a class="u-block" href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main id="1" class="o-w1k u-over_hidden">
         <!--key visual-->
@@ -137,7 +151,7 @@
         <!--key message-->
         <section class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
             <div class="l-flex_v_align_center l-flex_justify_center o-w100per u-pt120">
-                <h2 class="u-mt85 l-text_center u-font_large u-ml32"><span>日本生まれの暗号通貨</span></h2>
+                <h2 class="u-mt85 l-text_center u-font_large"><span>日本生まれの暗号通貨</span></h2>
             </div>
         </section>
         <!--刀-->
@@ -151,11 +165,11 @@
                 </div>
                 <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
                     <div class="l-text_center u-plr8">
-						<p><span>BitZenyの最大の特徴は普通のPCで</span><span>CPUマイニングができる点です。</span><br>
+                        <p><span>BitZenyの最大の特徴は普通のPCで</span><span>CPUマイニングができる点です。</span><br>
                             <span>多くの仮想通貨はGPUやASICを使って</span><span>マイニングされているため、</span><br>
                             <span>専用機器に投資できる</span><span>一部のマイナーによる寡占状態となります。</span><br>
                             <span>BitZenyはGPUやASICでの採掘が難しく、</span><br>
-							<span>CPUマイニングに適したアルゴリズムを</span><span>採用しています。</span></p>
+                            <span>CPUマイニングに適したアルゴリズムを</span><span>採用しています。</span></p>
                     </div>
                 </div>
                 <div class="o-w100per u-mb16">

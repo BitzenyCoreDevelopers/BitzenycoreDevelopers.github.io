@@ -34,7 +34,7 @@ a:hover {
 
 a:link,
 a:visited {
-    color: #007bff;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -93,6 +93,10 @@ h2 {
     margin-top: 160px;
 }
 
+.u-mt-48 {
+    margin-top: -108px;
+}
+
 .u-mt-150 {
     margin-top: -150px;
 }
@@ -123,6 +127,10 @@ h2 {
 
 .u-pt14 {
     padding-top: 14px;
+}
+
+.u-pt48 {
+    padding-top: 48px;
 }
 
 .u-pt120 {
@@ -172,8 +180,6 @@ h2 {
     overflow: hidden;
 }
 
-
-
 .u-block {
     display: block;
 }
@@ -199,9 +205,14 @@ h3 {
     height: 26px;
 }
 
-header {
+.u-sp_menu {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.u-bg_black_trans {
     background: rgba(0, 0, 0, 0.7);
 }
+
 
 .u-menu a,
 .u-ddmenu a {
@@ -249,7 +260,7 @@ header {
 .u-tiltbg_samurai:before {
     background-image: url(../img/samurai.jpg);
     background-position: center center;
-    background-size: 1024px;
+    background-size: 1120px;
 }
 
 .u-tiltbg_katana:before {
@@ -339,23 +350,43 @@ header {
     font-size: 80%;
 }
 
+.u-nav-list {
+    display: none;
+}
+
+.u-nav-toggle-btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    z-index: 100;
+}
+
+.u-nav-toggle-btn.open::before {
+    content: url(/img/menu_icon_close.svg);
+}
+
+.u-nav-toggle-btn.close::before {
+    content: url(/img/menu_icon.svg);
+}
+
+.u-nav-list a,
 .u-ddmenu a {
     display: block;
     padding: 11px 20px 8px 20px;
 }
 
+.u-nav-list ul,
 .u-ddmenu ul {
     display: none;
 }
 
+u-nav-list ul li a,
 .u-ddmenu ul li a {
     padding: 13px;
     margin: 1px 0 1px;
 }
 
-.u-pc_menu .u-ddmenu ul li a {
-    background: rgba(0, 0, 0, 0.7);
-}
+
 
 .u-scrollbar {
     overflow-y: scroll;
@@ -404,7 +435,7 @@ header {
 }
 
 .u-ddmenu a {
-    padding: 12px 12px 13px 12px;
+    padding: 12px 12px 10px 12px;
 }
 
 .u-sp_menu a,
