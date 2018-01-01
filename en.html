@@ -49,10 +49,27 @@
             });
 
             $('.js-parent').click(function() {
-                $('.js-ddmenu_child').slideDown(150);
+                $('.js-ddmenu_child').fadeIn(150);
+
             });
             $('.ddmenu_child a, main').click(function() {
-                $('.js-ddmenu_child').slideUp(150);
+                $('.js-ddmenu_child').fadeOut(150);
+            });
+
+            $('#js-nav-toggle').click(function() {
+                if ($('#js-nav-toggle').attr("class") == 'u-nav-toggle-btn close') {
+                    $('.u-nav-list').fadeIn();
+                    $(this).removeClass("close").addClass("open");
+                } else {
+                    $('.u-nav-list').fadeOut(function() {
+                        $('#js-nav-toggle').removeClass("open").addClass("close");
+                    });
+                }
+            });
+            $('.u-nav-list a,main').click(function() {
+                $('.u-nav-list').fadeOut(function() {
+                    $('#js-nav-toggle').removeClass("open").addClass("close");
+                });
             });
 
             $('#js-table_disp').csv2table('hashrate.csv');
@@ -64,14 +81,13 @@
             $('#js-parallax2').css('top', (scrolled / 6) - 40 + 'px');
             $('#js-parallax3').css('top', (scrolled * 0.2) - 740 + 'px');
         });
-
     </script>
 </head>
 
 <body class="l-flex_justify_center">
     <header class="l-fixed o-w100per u-font_sans">
         <!--PCメニュー-->
-        <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu">
+        <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu u-bg_black_trans">
             <div class="l-flex_justify_sb l-flex_v_align_center u-plr8 u-menu">
                 <a class=" l-flex_v_align_center" href="#1"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</a>
                 <a class="u-block l-text_center" href="#2">Downloads</a>
@@ -86,21 +102,21 @@
                         </div>
                     </a>
                     <ul class="js-ddmenu_child l-text_right">
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="/">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/jp.png">
                                     <p>Japanese</p>
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="en.html">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/us.png">
                                     <p>English</p>
                                 </div>
                             </a>
                         </li>
-                        <li>
+                        <li class="u-bg_black_trans">
                             <a href="nl.html">
                                 <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/nl.png">
                                     <p>Dutch</p>
@@ -112,22 +128,20 @@
             </ul>
         </div>
         <!--SPメニュー-->
-        <div class="l-text_center l-flex_justify_sb l-flex_v_align_top o-w100per u-m0a u-sp_menu">
-            <ul class="u-ddmenu">
-                <li><a class="js-parent" style="cursor:default;"><span class="l-text_center l-flex_v_align_center l-flex_justify_center"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</span></a>
-                    <ul class="js-ddmenu_child u-border_top">
-                        <li class="u-pt14"><a class="l-text_center u-block" href="#1">Top</a></li>
-                        <li><a class="l-text_center u-block" href="#2">Downloads</a></li>
-                        <li><a class="l-text_center u-block" href="#3">Tech Info</a></li>
-                        <li><a class="l-text_center u-block" href="#4">Links</a></li>
-                        <li class="u-p16"><img class="o-h8" src="img/tri.svg"> Select Language</li>
-                        <li><a href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
-                        <li><a href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
-                        <li class="u-pb16"><a href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
-                    </ul>
-                </li>
+        <nav class="u-sp_menu">
+            <div class="l-flex_direction_reverse u-p16"><button id="js-nav-toggle" class="u-nav-toggle-btn close"></button></div>
+            <ul class="l-text_center u-nav-list u-bg_black_trans u-mt-48 u-pt48">
+                <li class="u-p16 u-border_bottom"><img class="o-h8" src="img/tri.svg"> Menu</li>
+                <li><a class="u-block" href="#1">Top</a></li>
+                <li><a class="u-block" href="#2">Downloads</a></li>
+                <li><a class="u-block" href="#3">Tech Info</a></li>
+                <li><a class="u-block" href="#4">Links</a></li>
+                <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
+                <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
+                <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
+                <li><a class="u-block" href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main id="1" class="o-w1k u-over_hidden">
         <!--key visual-->
@@ -220,7 +234,7 @@
                         <div class="o-w50per u-border_bottom u-font_bold u-tech_info">Difficulty</div>
                         <div class="o-w50per u-border_bottom u-tech_info">DarkGravityWave3</div>
                         <div class="o-w50per u-border_bottom u-font_bold u-tech_info">Block Reward</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">250ZNY(Dec.2017:62.5ZNY)</div>
+                        <div class="o-w50per u-border_bottom u-tech_info">250ZNY<br>(Dec.2017:62.5ZNY)</div>
                         <div class="o-w50per u-border_bottom u-font_bold u-tech_info">Halving</div>
                         <div class="o-w50per u-border_bottom u-tech_info">500,000ZNY</div>
                         <div class="o-w50per u-border_bottom u-font_bold u-tech_info">Port</div>
@@ -250,12 +264,12 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>BitZeny forum</h3>
+                                    <h3>BitZeny Forums</h3>
                                     <a href="https://twitter.com/MCPE_Yossi1114" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
                                     <p class="u-font_small u-pt14">Community forum for discuss a lot of things about BitZeny Mainly discussed Web service, exchanges, wallet and specification of coin.</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZeny forum</a>
+                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZeny Forums</a>
                                 </div>
                             </div>
                         </div>
@@ -272,11 +286,11 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>Telegram BitZeny Japan</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
+                                    <h3>Telegram BitZeny</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
                                     <p class="u-font_small u-pt14">It's BitZeny channel of chatting tool "Telegram". Mainly used for mainly chatting.</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://t.me/joinchat/EmaWHQ135_r0gga2E91jBQ" target="_blank">Telegram BitZeny Japan</a></div>
+                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://t.me/joinchat/G624oAt_JI5W6oXbBwm3QQ" target="_blank">Telegram BitZeny</a></div>
                             </div>
                         </div>
                         <div class="o-w33per o-link_h u-mb30">
