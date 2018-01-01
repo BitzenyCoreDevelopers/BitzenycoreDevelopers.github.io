@@ -363,10 +363,14 @@ h3 {
 
 .u-nav-toggle-btn.open::before {
     content: url(/img/menu_icon_close.svg);
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
 }
 
 .u-nav-toggle-btn.close::before {
     content: url(/img/menu_icon.svg);
+    -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
 }
 
 .u-nav-list a,
