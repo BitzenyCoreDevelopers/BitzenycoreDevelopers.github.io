@@ -49,11 +49,19 @@
             });
 
             $('.js-parent').click(function() {
-                $('.js-ddmenu_child').fadeIn(150);
-
+                if ($('.js-parent').attr("class") == 'js-parent close') {
+                    $('.js-ddmenu_child').fadeIn();
+                    $(this).removeClass("close").addClass("open");
+                } else {
+                    $('.js-ddmenu_child').fadeOut(function() {
+                        $('.js-parent').removeClass("open").addClass("close");
+                    });
+                }
             });
-            $('.ddmenu_child a, main').click(function() {
-                $('.js-ddmenu_child').fadeOut(150);
+            $('main').click(function() {
+                $('.js-ddmenu_child').fadeOut(function() {
+                    $('.js-parent').removeClass("open").addClass("close");
+                });
             });
 
             $('#js-nav-toggle').click(function() {
@@ -96,7 +104,7 @@
             </div>
             <ul class="u-ddmenu">
                 <li class="l-text_right">
-                    <a class="js-parent" style="cursor:default;">
+                    <a class="js-parent close" style="cursor:default;">
                         <div class="u-plr8">
                             <p><img class="o-h8 u-plr8" src="img/tri.svg">Language</p>
                         </div>
@@ -116,13 +124,6 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="u-bg_black_trans">
-                            <a href="nl.html">
-                                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/nl.png">
-                                    <p>Dutch</p>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -139,7 +140,6 @@
                 <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
                 <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
                 <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
-                <li><a class="u-block" href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
             </ul>
         </nav>
     </header>
@@ -207,7 +207,10 @@
                 <div class="o-w100per l-flex_justify_center l-flex_wrap">
                     <ul class="l-text_center o-w600 u-p16 u-m0a u-font_sans">
                         <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Release note</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-osx.dmg"><i class="fa fa-apple" aria-hidden="true"></i> bitzeny-1.2.1-osx.dmg</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-win32-setup.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> bitzeny-1.2.1-win32-setup.exe</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-win64-setup.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> bitzeny-1.2.1-win64-setup.exe</a></li>
                     </ul>
                 </div>
             </div>
@@ -220,10 +223,7 @@
                 </div>
                 <div class="l-flex_justify_center l-flex_wrap o-w100per">
                     <div class="l-text_center u-plr8">
-                        <p><span>CPU採掘が</span><span>経済的インフラストラクチャの</span><span>根幹を担うことで</span><br>
-                            <span>ベーシックインカムの</span><span>役割を果たします。</span><br>
-                            <span>さらにBitZenyが</span><span>世界の流通において機能し、</span><br>
-                            <span>弱者のセーフティネット</span><span>となる社会を目指します。</span></p>
+                        <p><span>BitZeny</span><span>経済圏の</span><span>成熟とともに</span><span>人々の生活に</span><span>定着させ、</span><br><span>活気のある</span><span>社会を</span><span>醸成します。</span></p>
                     </div>
                 </div>
             </div>
@@ -294,6 +294,16 @@
                                 </div>
                                 <div class="u-p16 u-pt0">
                                     <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://bitzeny.cswiki.jp/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
+                            </div>
+                        </div>
+                        <div class="o-w33per o-link_h u-mb30">
+                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                                <div class="u-p16 u-pb0">
+                                    <h3>BitZeny Portal</h3> <a href="https://twitter.com/saboriotoko" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                                    <p class="u-font_small u-pt14">BitZeny関連のサービスやイベント情報、初心者向けの導入方法まで、あらゆる情報をひと目でわかるサイトを目指して情報発信しています。</p>
+                                </div>
+                                <div class="u-p16 u-pt0">
+                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzenyportal.biz/" target="_blank">BitZeny Portal</a></div>
                             </div>
                         </div>
                         <div class="o-w33per o-link_h u-mb30">

@@ -49,11 +49,19 @@
             });
 
             $('.js-parent').click(function() {
-                $('.js-ddmenu_child').fadeIn(150);
-
+                if ($('.js-parent').attr("class") == 'js-parent close') {
+                    $('.js-ddmenu_child').fadeIn();
+                    $(this).removeClass("close").addClass("open");
+                } else {
+                    $('.js-ddmenu_child').fadeOut(function() {
+                        $('.js-parent').removeClass("open").addClass("close");
+                    });
+                }
             });
-            $('.ddmenu_child a, main').click(function() {
-                $('.js-ddmenu_child').fadeOut(150);
+            $('main').click(function() {
+                $('.js-ddmenu_child').fadeOut(function() {
+                    $('.js-parent').removeClass("open").addClass("close");
+                });
             });
 
             $('#js-nav-toggle').click(function() {
@@ -96,7 +104,7 @@
             </div>
             <ul class="u-ddmenu">
                 <li class="l-text_right">
-                    <a class="js-parent" style="cursor:default;">
+                    <a class="js-parent close" style="cursor:default;">
                         <div class="u-plr8">
                             <p><img class="o-h8 u-plr8" src="img/tri.svg">Language</p>
                         </div>
@@ -116,13 +124,6 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="u-bg_black_trans">
-                            <a href="nl.html">
-                                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/nl.png">
-                                    <p>Dutch</p>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -139,7 +140,6 @@
                 <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
                 <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
                 <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
-                <li><a class="u-block" href="nl.html"><img class="o-h8" src="img/language/nl.png"> Dutch</a></li>
             </ul>
         </nav>
     </header>
@@ -151,7 +151,7 @@
         <!--key message-->
         <section class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
             <div class="l-flex_v_align_center l-flex_justify_center o-w100per u-pt120">
-                <h2 class="u-mt85 l-text_center u-font_large"><span>Brush up yourself,</span> <span>then it will be given.</span></h2>
+                <h1 class="u-mt85 l-text_center u-font_large"><span>The cryptocurrency was born in Japan</span></h1>
             </div>
         </section>
         <!--刀-->
@@ -161,20 +161,11 @@
         <section class="u-tilt u-mt-150 u-tilt-14 u-tiltbg_gray">
             <div class="u-pt200 u-pb200">
                 <div class="o-w100per u-mb16">
-                    <h1 class="l-text_center u-m16"><span>This is a cryptocurrency</span> <span>born in Japan</span></h1>
+                    <h2 class="l-text_center u-m16"><span>Mining by CPU</span></h2>
                 </div>
                 <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
                     <div class="l-text_center u-plr8">
-                        <p>This is a cryptocurrency born in Japan.<br>Zeny means money,it was used in Edo period as money.<br>BitZeny is a coin what imaged Samurai in town of Edo and also their sword as a soul.<br>Get this and be a samurai.
-                        </p>
-                    </div>
-                </div>
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16"><span>Anybody can mine</span> <span>by CPU easily</span></h2>
-                </div>
-                <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
-                    <div class="l-text_center u-plr8">
-                        <p>Thanks to mining by Yescrypt algorithm, you don't need any special equipment.<br> You can do mining by your PC or mobile phone.</p>
+                        <p>The greatest feature of BitZeny is that CPU mining can be done with a normal PC.<br> Since many cryptocurrencis are mined using GPUs and ASICs,<br> it is an oligopoly state by some minor who can invest in dedicated equipment. <br>BitZeny is difficult to mining with GPU and ASIC,<br> and adopts algorithm suitable for CPU mining.</p>
                     </div>
                 </div>
                 <div class="o-w100per u-mb16">
@@ -182,7 +173,17 @@
                 </div>
                 <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
                     <div class="l-text_center u-plr8">
-                        <p>In the BitZeny forum, everyday "Zeny samurais" are discussing about many kind topic.<br> Not only consider/develop of function or service,<br> but also "Zeny-hime" as a image charactor and original goods was born.<br> Your word/action makes the future of BitZeny.
+                        <p>Bitzeny community is bustling with many miners<br> because this cryptocurrency adopts the "CPU mining" which an individual can take the profit.<br> Also some restaurant accept Bitzeny payment,<br> and various functions about BitZeny are being developed.<br>(ex.twitter tip bot "Zeny-Hime")<br> So "The Bitzeny world" - which is enjoy miner and holders spreading in the world.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="o-w100per u-mb16">
+                    <h2 class="l-text_center u-m16"><span>This is a cryptocurrency</span> <span>born in Japan</span></h2>
+                </div>
+                <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
+                    <div class="l-text_center u-plr8">
+                        <p>BitZeny's history goes back to November 2014.<br> Aiming at a cryptographic currency that everyone can mining easily,<br> it was born by Japanese developers as a clone of Bitcoin.<br> The currency unit is ZNY, the total number of issue is limited to 250 million ZNY.
                         </p>
                     </div>
                 </div>
@@ -197,7 +198,10 @@
                 <div class="o-w100per l-flex_justify_center l-flex_wrap">
                     <ul class="l-text_center o-w600 u-p16 u-m0a u-font_sans">
                         <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Release note</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-osx.dmg"><i class="fa fa-apple" aria-hidden="true"></i> bitzeny-1.2.1-osx.dmg</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-win32-setup.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> bitzeny-1.2.1-win32-setup.exe</a></li>
+                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z1.2.1/bitzeny-1.2.1-win64-setup.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> bitzeny-1.2.1-win64-setup.exe</a></li>
                     </ul>
                 </div>
             </div>
@@ -210,7 +214,7 @@
                 </div>
                 <div class="l-flex_justify_center l-flex_wrap o-w100per">
                     <div class="l-text_center u-plr8">
-                        <p>As CPU mining be the foundation of an economic infrastructure,<br> it can be the role of basic income.<br> And more, BitZeny function all over the world of distribution,<br> it is targetting safety net of person who is in weak position in the society.</p>
+                        <p>With the maturity of the BitZeny economy,<br>it will settle in people's lives and foster a vibrant society.</p>
                     </div>
                 </div>
             </div>
@@ -281,6 +285,16 @@
                                 </div>
                                 <div class="u-p16 u-pt0">
                                     <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://bitzeny.cswiki.jp/" target="_blank">BitZeny Wiki</a></div>
+                            </div>
+                        </div>
+                        <div class="o-w33per o-link_h u-mb30">
+                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                                <div class="u-p16 u-pb0">
+                                    <h3>BitZeny Portal</h3> <a href="https://twitter.com/saboriotoko" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
+                                    <p class="u-font_small u-pt14">This provides information on BitZeny related services and event information, introduction method for beginners, aiming at a site that understands everything at a glance.</p>
+                                </div>
+                                <div class="u-p16 u-pt0">
+                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzenyportal.biz/" target="_blank">BitZeny Portal</a></div>
                             </div>
                         </div>
                         <div class="o-w33per o-link_h u-mb30">
