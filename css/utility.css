@@ -394,6 +394,46 @@ u-nav-list ul li a,
     margin: 1px 0 1px;
 }
 
+.u-insight-label:hover{
+    opacity: 0.6;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.insight-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 12;
+    background: rgba(15,15,15,.6);
+}
+
+.u-insight-modal-body{
+    margin: auto 0;
+    position: relative;
+    top: 50px;
+    width: 90%;
+    text-align: center;
+}
+
+.u-insight-list{
+    list-style: decimal;
+    list-style-position: inside;
+    padding: 10px;
+}
+
+.u-insight-list-item{
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.u-insight-modal-btn{
+    padding: 10px;
+    border: none;
+}
 
 
 .u-scrollbar {

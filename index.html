@@ -79,7 +79,21 @@
                 });
             });
 
-            $('#js-table_disp').csv2table('hashrate.csv');
+            $('#insight-modal-switch').click(function(){
+                $('#insight-modal').fadeIn(200);
+            });
+            $(document).on('keydown',function (e) {
+                if(e.keyCode === 27) { // ESC
+                    $('#insight-modal').fadeOut(200);
+                }
+            });
+            $('.u-insight-modal-btn').click(function(){
+                $('#insight-modal').fadeOut(200);
+            })
+            $('.insight-twitter').click(function(){
+                var twitter = $(this).data('twitter-id');
+                window.open('https://twitter.com/' + twitter);
+            })
         });
 
         $(window).scroll(function(e) {
@@ -199,7 +213,7 @@
                             <span>もちろん、あなたも例外ではありません。</span></p>
                     </div>
                 </div>
-                
+
                     </div>
                 </div>
             </div>
@@ -282,33 +296,11 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>BitZenyフォーラム</h3>
-                                    <a href="https://twitter.com/MCPE_Yossi1114" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのあれこれについて話し合っているコミュニティーフォーラムです。Webサービスから取引所、ウォレットやコインの仕様について話し合っています。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZenyフォーラム</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
                                     <h3>暗号通貨BitZenyまとめWiki</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
                                     <p class="u-font_small u-pt14">BitZeny関連のニュースや導入方法をはじめ、企画・コミュニティ・技術者向け情報などを総合的に発信しています。</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
                                     <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Portal</h3> <a href="https://twitter.com/saboriotoko" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZeny関連のサービスやイベント情報、初心者向けの導入方法まで、あらゆる情報をひと目でわかるサイトを目指して情報発信しています。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzenyportal.biz/" target="_blank">BitZeny Portal</a></div>
                             </div>
                         </div>
                         <div class="o-w33per o-link_h u-mb30">
@@ -345,64 +337,11 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>Cryptopia</h3> <a href="https://twitter.com/Cryptopia_NZ" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">ニュージーランドの取引所です。BitZenyをBTCやLTCなどと取引できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://www.cryptopia.co.nz/" target="_blank">Cryptopia</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">namuyan.dip.jp MultiLightBlockExplorer</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
                                     <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
                                     <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">zenyinsight.tomotomo9696.xyz</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://insight.bitzeny.jp/" target="_blank">insight.bitzeny.jp</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.insight.monaco-ex.org/" target="_blank">zeny.insight.monaco-ex.org</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://insight.bitzeny.pw/" target="_blank">insight.bitzeny.pw</a>
+                                    <label class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white u-insight-label" for="insight-modal-switch">Insightまとめ</label>
                                 </div>
                             </div>
                         </div>
@@ -416,8 +355,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="o-w33per"></div>
-                        <div class="o-w33per"></div>
                     </div>
                 </div>
             </div>
@@ -434,6 +371,42 @@
             <p class="l-text_center o-w100per u-pb160 u-font_small">Copyright © 2017-2018 BitZeny Project. All Rights Reserved.</p>
         </footer>
     </main>
+    <div id="insight-modal" class="insight-modal">
+        <input type="checkbox" id="insight-modal-switch">
+        <div class="u-insight-modal-body o-w1k" style="margin: auto;">
+            <div class="u-insight-modal-header">
+                <div class="u-insight-modal-header-inner">
+                    <h2>BitZeny版Explorerリンク集</h2>
+                </div>
+            </div>
+            <div class="u-insight-modal-content">
+                <p>BitZeny版Explorerは多数あるのでまとめました。</p>
+                <ul class="u-insight-list">
+                    <li class="u-insight-list-item">
+                        <a href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">namuyan.dip.jp</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="namuyan_mine" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">zenyinsight.tomotomo9696.xyz</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="tomotomo_9696" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://insight.bitzeny.jp/" target="_blank">insight.bitzeny.jp</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="zenywallet" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zeny.insight.monaco-ex.org/" target="_blank">zeny.insight.monaco-ex.org</a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zny.blockbook.ovh/" target="_blank">zny.blockbook.ovh</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="uesitananame55" href="#"></a>
+                    </li>
+                </ul>
+                <button class="o-w33per u-color2 u-iconize-square u-font_bold u-font_white u-insight-modal-btn">
+                    閉じる
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
