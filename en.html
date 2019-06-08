@@ -79,7 +79,21 @@
                 });
             });
 
-            $('#js-table_disp').csv2table('hashrate.csv');
+            $('#insight-modal-switch').click(function(){
+                $('#insight-modal').fadeIn(200);
+            });
+            $(document).on('keydown',function (e) {
+                if(e.keyCode === 27) { // ESC
+                    $('#insight-modal').fadeOut(200);
+                }
+            });
+            $('.u-insight-modal-btn').click(function(){
+                $('#insight-modal').fadeOut(200);
+            })
+            $('.insight-twitter').click(function(){
+                var twitter = $(this).data('twitter-id');
+                window.open('https://twitter.com/' + twitter);
+            })
         });
 
         $(window).scroll(function(e) {
@@ -281,33 +295,11 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Forums</h3>
-                                    <a href="https://twitter.com/MCPE_Yossi1114" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">Community forum for discuss a lot of things about BitZeny Mainly discussed Web service, exchanges, wallet and specification of coin.</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZeny Forums</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
                                     <h3>BitZeny Wiki</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
                                     <p class="u-font_small u-pt14">It's comprehensively transmitting about News relating BitZeny, How to start, information for Project, community, engineer.</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
                                     <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">BitZeny Wiki</a></div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>NOVA exchange</h3> <a href="https://twitter.com/nova_exchange" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">Swedish exchange. </p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://novaexchange.com/" target="_blank">BitZeny Portal</a></div>
                             </div>
                         </div>
                         <div class="o-w33per o-link_h u-mb30">
@@ -344,6 +336,16 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
+                                    <h3>NOVA exchange</h3> <a href="https://twitter.com/nova_exchange" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
+                                    <p class="u-font_small u-pt14">Swedish exchange. </p>
+                                </div>
+                                <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://novaexchange.com/" target="_blank">NOVA exchange</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o-w33per o-link_h u-mb30">
+                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                                <div class="u-p16 u-pb0">
                                     <h3>TradeSatoshi</h3> <a href="https://twitter.com/TradeSatoshi" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
                                     <p class="u-font_small u-pt14">You can buy BitZeny by BTC and LTC,DOGE,USDT.</p>
                                 </div>
@@ -354,65 +356,11 @@
                         <div class="o-w33per o-link_h u-mb30">
                             <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
                                 <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">By put BitZeny's wallet address or transaction ID, you can check deposit of wallet and history of transfer. And you can also check detail of founded block.</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">namuyan.dip.jp MultiLightBlockExplorer</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
+                                    <h3>BitZeny Explorer</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
                                     <p class="u-font_small u-pt14">By put BitZeny's wallet address or transaction ID, you can check deposit of wallet and history of transfer. And you can also check detail of founded block.</p>
                                 </div>
                                 <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">zenyinsight.tomotomo9696.xyz</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">By put BitZeny's wallet address or transaction ID, you can check deposit of wallet and history of transfer. And you can also check detail of founded block.</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://insight.bitzeny.jp/" target="_blank">insight.bitzeny.jp</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">By put BitZeny's wallet address or transaction ID, you can check deposit of wallet and history of transfer. And you can also check detail of founded block.</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.insight.monaco-ex.org/" target="_blank">zeny.insight.monaco-ex.org</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BlockBook</h3> <a href="https://twitter.com/uesitananame55" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">Blockbook is BlockChain Explorer developed by SatoshiLabs.</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zny.blockbook.ovh/" target="_blank">zny.blockbook.ovh</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BlockBook</h3> <a href="https://twitter.com/sanyodensan" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>Manager</a>
-                                    <p class="u-font_small u-pt14">Blockbook is BlockChain Explorer developed by SatoshiLabs.</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.blockbook.zenypota.net/" target="_blank">zeny.blockbook.zenypota.net</a>
+                                    <label class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white u-insight-label" for="insight-modal-switch">Explorer Links</label>
                                 </div>
                             </div>
                         </div>
@@ -436,8 +384,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="o-w33per"></div>
-                        <div class="o-w33per"></div>
                     </div>
                 </div>
             </div>
@@ -454,6 +400,42 @@
             <p class="l-text_center o-w100per u-pb160 u-font_small">Copyright © 2018 BitZeny Project. All Rights Reserved.</p>
         </footer>
     </main>
+    <div id="insight-modal" class="insight-modal">
+        <input type="checkbox" id="insight-modal-switch">
+        <div class="u-insight-modal-body o-w1k" style="margin: auto;">
+            <div class="u-insight-modal-header">
+                <div class="u-insight-modal-header-inner">
+                    <h2>BitZenyExplorer Links</h2>
+                </div>
+            </div>
+            <div class="u-insight-modal-content">
+                <ul class="u-insight-list">
+                    <li class="u-insight-list-item">
+                        <a href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny target="_new">namuyan.dip.jp</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="namuyan_mine" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zenyinsight.tomotomo9696.xyz/" target="_new">zenyinsight.tomotomo9696.xyz</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="tomotomo_9696" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://insight.bitzeny.jp/" target="_new">insight.bitzeny.jp</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="zenywallet" href="#"></a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zeny.insight.monaco-ex.org/" target="_new">zeny.insight.monaco-ex.org</a>
+                    </li>
+                    <li class="u-insight-list-item">
+                        <a href="https://zny.blockbook.ovh/" target="_blank">zny.blockbook.ovh</a> -
+                        <a class="fa fa-twitter insight-twitter" aria-hidden="true" data-twitter-id="uesitananame55" href="#"></a>
+                    </li>
+                </ul>
+                <button class="o-w33per u-color2 u-iconize-square u-font_bold u-font_white u-insight-modal-btn">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
