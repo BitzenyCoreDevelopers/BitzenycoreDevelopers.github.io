@@ -2,459 +2,464 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="description" content="BitZeny.tech――CPUマイニングで誰でも手軽に入手できる日本発の仮想通貨、BitZenyの新公式サイト" />
-    <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="BitZeny.tech――CPUマイニングで誰でも手軽に入手できる日本発の仮想通貨、BitZenyの新公式サイト" />
+  <meta name="keywords" content="BitZeny,ビットゼニー,暗号通貨,仮想通貨,マイニング" />
 
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://bitzeny.tech/">
-    <meta property="og:image" content="https://bitzeny.tech/img/og_img.png">
-    <meta property="og:site_name" content="BitZeny.tech">
-    <meta property="og:title" content="BitZeny.tech">
-    <meta property="og:description" content="BitZeny.tech――CPUマイニングで誰でも手軽に入手できる日本発の仮想通貨、BitZenyの新公式サイト">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bitzeny.tech/">
+  <meta property="og:image" content="https://bitzeny.tech/img/og_img.png">
+  <meta property="og:site_name" content="BitZeny.tech">
+  <meta property="og:title" content="BitZeny.tech">
+  <meta property="og:description" content="BitZeny.tech――CPUマイニングで誰でも手軽に入手できる日本発の仮想通貨、BitZenyの新公式サイト">
 
-    <title>BitZeny.tech</title>
+  <title>BitZeny.tech</title>
 
-    <link rel="icon" href="img/bitzeny.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" integrity="sha256-5Co4VU8G29ti556RmwtiyF2G2De1jHI3XnJh66vGpRI=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/object.css">
-    <link rel="stylesheet" href="css/utility.css">
+  <link rel="icon" href="img/bitzeny.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" integrity="sha256-5Co4VU8G29ti556RmwtiyF2G2De1jHI3XnJh66vGpRI=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/object.css">
+  <link rel="stylesheet" href="css/utility.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" integrity="sha256-ETXu4iIohKzvSucuk6Bv0DCdqiqaTTGeMsjZ72szPzM=" crossorigin="anonymous"></script>
-    <script src="js/jquery.csv2table-0.02-b-4.8.js"></script>
-    <script>
-        $(function() {
-            flexibility(document.documentElement);
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js" integrity="sha256-ETXu4iIohKzvSucuk6Bv0DCdqiqaTTGeMsjZ72szPzM=" crossorigin="anonymous"></script>
+  <script src="js/jquery.csv2table-0.02-b-4.8.js"></script>
+  <script>
+    $(function() {
+      flexibility(document.documentElement);
 
-            $('a[href^="#menu"]').click(function() {
-                return false;
-            });
-            $('a[href^="#"]').click(function() {
-                var speed = 500;
-                var href = $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
-                $("html, body").animate({
-                    scrollTop: position
-                }, speed, "swing");
-                return false;
-            });
+      $('a[href^="#menu"]').click(function() {
+        return false;
+      });
+      $('a[href^="#"]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
 
-            $('.js-parent').click(function() {
-                if ($('.js-parent').attr("class") == 'js-parent close') {
-                    $('.js-ddmenu_child').fadeIn();
-                    $(this).removeClass("close").addClass("open");
-                } else {
-                    $('.js-ddmenu_child').fadeOut(function() {
-                        $('.js-parent').removeClass("open").addClass("close");
-                    });
-                }
-            });
-            $('main').click(function() {
-                $('.js-ddmenu_child').fadeOut(function() {
-                    $('.js-parent').removeClass("open").addClass("close");
-                });
-            });
-
-            $('#js-nav-toggle').click(function() {
-                if ($('#js-nav-toggle').attr("class") == 'u-nav-toggle-btn close') {
-                    $('.u-nav-list').fadeIn();
-                    $(this).removeClass("close").addClass("open");
-                } else {
-                    $('.u-nav-list').fadeOut(function() {
-                        $('#js-nav-toggle').removeClass("open").addClass("close");
-                    });
-                }
-            });
-            $('.u-nav-list a,main').click(function() {
-                $('.u-nav-list').fadeOut(function() {
-                    $('#js-nav-toggle').removeClass("open").addClass("close");
-                });
-            });
-
-            $('#js-table_disp').csv2table('hashrate.csv');
+      $('.js-parent').click(function() {
+        if ($('.js-parent').attr("class") == 'js-parent close') {
+          $('.js-ddmenu_child').fadeIn();
+          $(this).removeClass("close").addClass("open");
+        } else {
+          $('.js-ddmenu_child').fadeOut(function() {
+            $('.js-parent').removeClass("open").addClass("close");
+          });
+        }
+      });
+      $('main').click(function() {
+        $('.js-ddmenu_child').fadeOut(function() {
+          $('.js-parent').removeClass("open").addClass("close");
         });
+      });
 
-        $(window).scroll(function(e) {
-            var scrolled = $(window).scrollTop();
-            $('#js-parallax1').css('top', (scrolled / 6) + 'px');
-            $('#js-parallax2').css('top', (scrolled / 6) - 40 + 'px');
-            $('#js-parallax3').css('top', (scrolled * 0.2) - 740 + 'px');
+      $('#js-nav-toggle').click(function() {
+        if ($('#js-nav-toggle').attr("class") == 'u-nav-toggle-btn close') {
+          $('.u-nav-list').fadeIn();
+          $(this).removeClass("close").addClass("open");
+        } else {
+          $('.u-nav-list').fadeOut(function() {
+            $('#js-nav-toggle').removeClass("open").addClass("close");
+          });
+        }
+      });
+      $('.u-nav-list a,main').click(function() {
+        $('.u-nav-list').fadeOut(function() {
+          $('#js-nav-toggle').removeClass("open").addClass("close");
         });
+      });
 
-    </script>
+      $('#js-table_disp').csv2table('hashrate.csv');
+    });
+
+    $(window).scroll(function(e) {
+      var scrolled = $(window).scrollTop();
+      $('#js-parallax1').css('top', (scrolled / 6) + 'px');
+      $('#js-parallax2').css('top', (scrolled / 6) - 40 + 'px');
+      $('#js-parallax3').css('top', (scrolled * 0.2) - 740 + 'px');
+    });
+  </script>
 </head>
 
 <body class="l-flex_justify_center">
-    <header class="l-fixed o-w100per u-font_sans">
-        <!--PCメニュー-->
-        <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu u-bg_black_trans">
-            <div class="l-flex_justify_sb l-flex_v_align_center u-plr8 u-menu">
-                <a class=" l-flex_v_align_center" href="#1"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</a>
-                <a class="u-block l-text_center" href="#2">Downloads</a>
-                <a class="u-block l-text_center" href="#3">Tech Info</a>
-                <a class="u-block l-text_center" href="#4">Links</a>
+  <header class="l-fixed o-w100per u-font_sans">
+    <!--PCメニュー-->
+    <div class="l-flex_justify_sb l-flex_v_align_top o-w1k o-h48 u-m0a u-pc_menu u-bg_black_trans">
+      <div class="l-flex_justify_sb l-flex_v_align_center u-plr8 u-menu">
+        <a class=" l-flex_v_align_center" href="#1"><img class="u-logo" src="img/bitzeny.png">BitZeny Project</a>
+        <a class="u-block l-text_center" href="#2">Downloads</a>
+        <a class="u-block l-text_center" href="#3">Tech Info</a>
+        <a class="u-block l-text_center" href="#4">Links</a>
+      </div>
+      <ul class="u-ddmenu">
+        <li class="l-text_right">
+          <a class="js-parent close" style="cursor:default;">
+            <div class="u-plr8">
+              <p><img class="o-h8 u-plr8" src="img/tri.svg">Language</p>
             </div>
-            <ul class="u-ddmenu">
-                <li class="l-text_right">
-                    <a class="js-parent close" style="cursor:default;">
-                        <div class="u-plr8">
-                            <p><img class="o-h8 u-plr8" src="img/tri.svg">Language</p>
-                        </div>
-                    </a>
-                    <ul class="js-ddmenu_child l-text_right">
-                        <li class="u-bg_black_trans">
-                            <a href="/">
-                                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/jp.png">
-                                    <p>Japanese</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="u-bg_black_trans">
-                            <a href="en.html">
-                                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/us.png">
-                                    <p>English</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+          </a>
+          <ul class="js-ddmenu_child l-text_right">
+            <li class="u-bg_black_trans">
+              <a href="/">
+                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/jp.png">
+                  <p>Japanese</p>
+                </div>
+              </a>
+            </li>
+            <li class="u-bg_black_trans">
+              <a href="en.html">
+                <div class="l-flex_justify_sb l-flex_v_align_center o-w100 u-plr8"><img class="o-h8 u-plr8" src="img/language/us.png">
+                  <p>English</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--SPメニュー-->
+    <nav class="u-sp_menu">
+      <div class="l-flex_direction_reverse u-p16"><button id="js-nav-toggle" class="u-nav-toggle-btn close"></button></div>
+      <ul class="l-text_center u-nav-list u-bg_black_trans u-mt-48 u-pt48">
+        <li class="u-p16 u-border_bottom"><img class="o-h8" src="img/tri.svg"> Menu</li>
+        <li><a class="u-block" href="#1">Top</a></li>
+        <li><a class="u-block" href="#2">Downloads</a></li>
+        <li><a class="u-block" href="#3">Tech Info</a></li>
+        <li><a class="u-block" href="#4">Links</a></li>
+        <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
+        <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
+        <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="1" class="o-w1k u-over_hidden">
+    <!--key visual-->
+    <section id="js-parallax1" class="l-flex_justify_center o-w100per o-h680 u-tilt u-tiltbg_samurai u-z-10">
+      <img class="o-h210 u-mt160" src="img/bitzeny_logo.svg" alt="BitZeny">
+    </section>
+    <!--key message-->
+    <section class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
+      <div class="l-flex_v_align_center l-flex_justify_center o-w100per u-pt120">
+        <h2 class="u-mt85 l-text_center u-font_large"><span>日本生まれの暗号通貨</span></h2>
+      </div>
+    </section>
+    <!--刀-->
+    <section id="js-parallax2" class="o-h1k u-mt-150 u-bg_position_center u-bg_cover u-tiltbg_katana u-tilt u-z-10">
+    </section>
+    <!--説明-->
+    <section class="u-tilt u-mt-150 u-tilt-14 u-tiltbg_gray">
+      <div class="u-pt200 u-pb200">
+        <div class="o-w100per u-mb16">
+          <h1 class="l-text_center u-m16"><span>日本生まれの暗号通貨</span></h1>
         </div>
-        <!--SPメニュー-->
-        <nav class="u-sp_menu">
-            <div class="l-flex_direction_reverse u-p16"><button id="js-nav-toggle" class="u-nav-toggle-btn close"></button></div>
-            <ul class="l-text_center u-nav-list u-bg_black_trans u-mt-48 u-pt48">
-                <li class="u-p16 u-border_bottom"><img class="o-h8" src="img/tri.svg"> Menu</li>
-                <li><a class="u-block" href="#1">Top</a></li>
-                <li><a class="u-block" href="#2">Downloads</a></li>
-                <li><a class="u-block" href="#3">Tech Info</a></li>
-                <li><a class="u-block" href="#4">Links</a></li>
-                <li class="u-p16 u-border_bottom u-border_top"><img class="o-h8" src="img/tri.svg"> Select Language</li>
-                <li><a class="u-block" href="/"><img class="o-h8" src="img/language/jp.png"> Japanese</a></li>
-                <li><a class="u-block" href="en.html"><img class="o-h8" src="img/language/us.png"> English</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="1" class="o-w1k u-over_hidden">
-        <!--key visual-->
-        <section id="js-parallax1" class="l-flex_justify_center o-w100per o-h680 u-tilt u-tiltbg_samurai u-z-10">
-            <img class="o-h210 u-mt160" src="img/bitzeny_logo.svg" alt="BitZeny">
-        </section>
-        <!--key message-->
-        <section class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
-            <div class="l-flex_v_align_center l-flex_justify_center o-w100per u-pt120">
-                <h2 class="u-mt85 l-text_center u-font_large"><span>日本生まれの暗号通貨</span></h2>
-            </div>
-        </section>
-        <!--刀-->
-        <section id="js-parallax2" class="o-h1k u-mt-150 u-bg_position_center u-bg_cover u-tiltbg_katana u-tilt u-z-10">
-        </section>
-         <!--説明-->
-         <section class="u-tilt u-mt-150 u-tilt-14 u-tiltbg_gray">
-            <div class="u-pt200 u-pb200">
-                <div class="o-w100per u-mb16">
-                     <h1 class="l-text_center u-m16"><span>日本生まれの暗号通貨</span></h1>
-                </div>
-                 <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
-                    <div class="l-text_center u-plr8">
-                        <p><span>BitZenyの歴史は2014年11月に遡ります。</span><br>
-                            <span>だれでも手軽に開発、マイニングできる</span><span>暗号通貨を目指し、</span><br>
-                            <span>Bitcoinのクローンとして、</span><span>日本国内の開発者によって誕生しました。</span><br>
-                            <span>通貨単位はZNY、</span><span>総発行枚数は2億5千万枚と上限があります。</span> </p>
-                     </div>
-                </div>
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16"><span>CPUマイニングに</span><span>最適化</span></h2>
-                </div>
-                <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
-                    <div class="l-text_center u-plr8">
-                        <p><span>BitZenyの最大の特徴は普通のPCで</span><span>CPUマイニングができる点でしょう。</span><br>
-                            <span>他の多くの仮想通貨は、</span><span>高価なGPUやASICを使って</span><span>マイニングされています。</span><br>
-                            <span>そのため、専用機器に投資できる</span><span>一部のマイナーによる寡占状態となります。</span><br>
-                            <span>BitZenyはGPUやASIC等での採掘が難しく、</span><br>
-                            <span>一般的なCPUでのマイニングに適した</span><span>アルゴリズム、</span><br>
-                            <span>「Yescrypt」を採用しています。</span></p>
-                    </div>
-                </div>
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16"><span>活発なコミュニティ</span></h2>
-                </div>
-                <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
-                    <div class="l-text_center u-plr8">
-                        <p><span>BitZenyはCPUマイニングによって</span><span>誰でも手軽に入手できるため、</span><br>
-                            <span>BitZenyのコミュニティは</span><span>マイナー達による賑わいを見せています。</span><br>
-                            <span>また、 BitZenyで決済可能な飲食店、</span><br>
-                            <span>Twitter上でBitZenyを送りあえるBot</span><br>
-                            <span>「りん姫（@zenytips)」をはじめとした</span><span>各種webサービス、</span><br>
-                            <span>BitZenyそのものなどが</span><span>有志達によって日夜開発されており、</span><br>
-                            <span>マイナーのみならず、多種多様な人間が</span><span>楽しめる世界が広がりつつあります。</span><br>
-                            <span>もちろん、あなたも例外ではありません。</span></p>
-                    </div>
-                </div>
+        <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
+          <div class="l-text_center u-plr8">
+            <p><span>BitZenyの歴史は2014年11月に遡ります。</span><br>
+              <span>だれでも手軽に開発、マイニングできる</span><span>暗号通貨を目指し、</span><br>
+              <span>Bitcoinのクローンとして、</span><span>日本国内の開発者によって誕生しました。</span><br>
+              <span>通貨単位はZNY、</span><span>総発行枚数は2億5千万枚と上限があります。</span> </p>
+          </div>
+        </div>
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16"><span>CPUマイニングに</span><span>最適化</span></h2>
+        </div>
+        <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
+          <div class="l-text_center u-plr8">
+            <p><span>BitZenyの最大の特徴は普通のPCで</span><span>CPUマイニングができる点でしょう。</span><br>
+              <span>他の多くの仮想通貨は、</span><span>高価なGPUやASICを使って</span><span>マイニングされています。</span><br>
+              <span>そのため、専用機器に投資できる</span><span>一部のマイナーによる寡占状態となります。</span><br>
+              <span>BitZenyはGPUやASIC等での採掘が難しく、</span><br>
+              <span>一般的なCPUでのマイニングに適した</span><span>アルゴリズム、</span><br>
+              <span>「Yescrypt」を採用しています。</span></p>
+          </div>
+        </div>
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16"><span>活発なコミュニティ</span></h2>
+        </div>
+        <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb160">
+          <div class="l-text_center u-plr8">
+            <p><span>BitZenyはCPUマイニングによって</span><span>誰でも手軽に入手できるため、</span><br>
+              <span>BitZenyのコミュニティは</span><span>マイナー達による賑わいを見せています。</span><br>
+              <span>また、 BitZenyで決済可能な飲食店、</span><br>
+              <span>Twitter上でBitZenyを送りあえるBot</span><br>
+              <span>「りん姫（@zenytips)」をはじめとした</span><span>各種webサービス、</span><br>
+              <span>BitZenyそのものなどが</span><span>有志達によって日夜開発されており、</span><br>
+              <span>マイナーのみならず、多種多様な人間が</span><span>楽しめる世界が広がりつつあります。</span><br>
+              <span>もちろん、あなたも例外ではありません。</span></p>
+          </div>
+        </div>
 
-                    </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <!--ダウンロード-->
+    <section id="2" class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
+      <div class="u-pt200 u-pb160">
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16">Downloads</h2>
+        </div>
+        <div class="o-w100per l-flex_justify_center l-flex_wrap">
+          <ul class="l-text_center o-w600 u-p16 u-m0a u-font_sans">
+            <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-win32-setup-unsigned.exe"><i class="fa fa fa-windows" aria-hidden="true"></i>
+                BitZeny 2.0.2 Win32bit版</a></li>
+            <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-win64-setup-unsigned.exe"><i class="fa fa fa-windows" aria-hidden="true"></i>
+                BitZeny 2.0.2 Win64bit版</a></li>
+            <li><a class="o-w100per u-p16 u-mb16 u-color3 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2.tar.gz"><i class="fa fa fa-linux" aria-hidden="true"></i> BitZeny
+                2.0.2 Linux版</a></li>
+            <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-osx-unsigned.dmg"><i class="fa fa-apple" aria-hidden="true"></i>
+                BitZeny 2.0.2 Mac版</a></li>
+            <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Other Release</a></li>
+            <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--実現する社会-->
+    <section id="js-parallax3" class="u-mt-150 u-bg_cover u-bg_position_center u-tilt u-tiltbg_society u-z-10">
+      <div class="u-pt400 u-pb400">
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16">我々の目指すもの</h2>
+        </div>
+        <div class="l-flex_justify_center l-flex_wrap o-w100per">
+          <div class="l-text_center u-plr8">
+            <p><span>BitZeny経済圏の成熟とともに人々の生活に定着させ、</span><br><span>活気のある社会を醸成します。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--技術仕様-->
+    <section id="3" class="u-tilt u-mt-150 u-tilt-14 u-tiltbg_navy">
+      <div class="u-pt200 u-pb200">
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16">Technical Information</h2>
+        </div>
+        <div class="o-w100per l-flex_justify_center l-flex_wrap">
+          <div class="l-flex_justify_center l-flex_wrap o-w600 u-p16 u-font_sans">
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">シンボル</div>
+            <div class="o-w50per u-border_bottom u-tech_info">ZNY</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">アルゴリズム</div>
+            <div class="o-w50per u-border_bottom u-tech_info">Original Yescrypt-0.5</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">最大発行枚数</div>
+            <div class="o-w50per u-border_bottom u-tech_info">250,000,000枚</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">プレマイン</div>
+            <div class="o-w50per u-border_bottom u-tech_info">0</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ブロック生成時間</div>
+            <div class="o-w50per u-border_bottom u-tech_info">90秒</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">難易度アルゴリズム</div>
+            <div class="o-w50per u-border_bottom u-tech_info">DarkGravityWave3</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ブロック発見報酬</div>
+            <div class="o-w50per u-border_bottom u-tech_info">250枚(2019年4月現在31.25枚)</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">半減周期</div>
+            <div class="o-w50per u-border_bottom u-tech_info">500,000ブロックごと</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ポート</div>
+            <div class="o-w50per u-border_bottom u-tech_info">9253</div>
+            <div class="o-w50per u-border_bottom u-font_bold u-tech_info">RPCポート</div>
+            <div class="o-w50per u-border_bottom u-tech_info">9252</div>
+          </div>
+        </div>
+        <div class="u-pt130 u-pb100">
+          <div class="o-w100per u-mb16">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--リンク-->
+    <section id="4" class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
+      <div class="u-pt120 u-pb160">
+        <div class="o-w100per u-mb16">
+          <h2 class="l-text_center u-m16">Links</h2>
+        </div>
+        <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb100">
+          <div class="l-flex_justify_center l-flex_wrap o-w1k u-p16 u-font_sans">
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZenyフォーラム</h3>
+                  <a href="https://twitter.com/MCPE_Yossi1114" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyのあれこれについて話し合っているコミュニティーフォーラムです。Webサービスから取引所、ウォレットやコインの仕様について話し合っています。</p>
                 </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZenyフォーラム</a>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--ダウンロード-->
-        <section id="2" class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
-            <div class="u-pt200 u-pb160">
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16">Downloads</h2>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny-wiki+</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZeny関連のニュースや導入方法をはじめ、企画・コミュニティ・技術者向け情報などを総合的に発信しています。</p>
                 </div>
-                <div class="o-w100per l-flex_justify_center l-flex_wrap">
-                    <ul class="l-text_center o-w600 u-p16 u-m0a u-font_sans">
-                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-win32-setup-unsigned.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> BitZeny 2.0.2 Win32bit版</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color1 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-win64-setup-unsigned.exe"><i class="fa fa fa-windows" aria-hidden="true"></i> BitZeny 2.0.2 Win64bit版</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color3 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2.tar.gz"><i class="fa fa fa-linux" aria-hidden="true"></i> BitZeny 2.0.2 Linux版</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color2 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases/download/z2.0.2/bitzeny-2.0.2-osx-unsigned.dmg"><i class="fa fa-apple" aria-hidden="true"></i> BitZeny 2.0.2 Mac版</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny/releases" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Other Release</a></li>
-                        <li><a class="o-w100per u-p16 u-mb16 u-color4 u-font_white u-iconize-round" href="https://github.com/BitzenyCoreDevelopers/bitzeny"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></li>
-                    </ul>
-                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
+              </div>
             </div>
-        </section>
-        <!--実現する社会-->
-        <section id="js-parallax3" class="u-mt-150 u-bg_cover u-bg_position_center u-tilt u-tiltbg_society u-z-10">
-            <div class="u-pt400 u-pb400">
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16">我々の目指すもの</h2>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>NOVAexchange</h3> <a href="https://twitter.com/nova_exchange" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">スウェーデンに本拠を置く取引所。登録には本人確認書類が必要です。</p>
                 </div>
-                <div class="l-flex_justify_center l-flex_wrap o-w100per">
-                    <div class="l-text_center u-plr8">
-                        <p><span>BitZeny経済圏の成熟とともに人々の生活に定着させ、</span><br><span>活気のある社会を醸成します。</span></p>
-                    </div>
-                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://novaexchange.com/" target="_blank">NOVAexchange</a></div>
+              </div>
             </div>
-        </section>
-        <!--技術仕様-->
-        <section id="3" class="u-tilt u-mt-150 u-tilt-14 u-tiltbg_navy">
-            <div class="u-pt200 u-pb200">
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16">Technical Information</h2>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>Telegram BitZeny Japan</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">チャットツールTelegramのビットゼニーチャンネルです。主に企画、開発の場となっています。</p>
                 </div>
-                <div class="o-w100per l-flex_justify_center l-flex_wrap">
-                    <div class="l-flex_justify_center l-flex_wrap o-w600 u-p16 u-font_sans">
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">シンボル</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">ZNY</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">アルゴリズム</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">Original Yescrypt-0.5</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">最大発行枚数</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">250,000,000枚</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">プレマイン</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">0</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ブロック生成時間</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">90秒</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">難易度アルゴリズム</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">DarkGravityWave3</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ブロック発見報酬</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">250枚(2019年4月現在31.25枚)</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">半減周期</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">500,000ブロックごと</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">ポート</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">9253</div>
-                        <div class="o-w50per u-border_bottom u-font_bold u-tech_info">RPCポート</div>
-                        <div class="o-w50per u-border_bottom u-tech_info">9252</div>
-                    </div>
-                </div>
-                <div class="u-pt130 u-pb100">
-                    <div class="o-w100per u-mb16">
-                    </div>
-                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://t.me/joinchat/EmaWHQ135_r0gga2E91jBQ" target="_blank">Telegram BitZeny Japan</a></div>
+              </div>
             </div>
-        </section>
-        <!--リンク-->
-        <section id="4" class="u-mt-150 u-tilt u-tilt-14 u-tiltbg_white u-font_gray">
-            <div class="u-pt120 u-pb160">
-                <div class="o-w100per u-mb16">
-                    <h2 class="l-text_center u-m16">Links</h2>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny Discord サーバー</h3><a href="https://twitter.com/uesitananame55" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">チャットツールDiscordのBitZenyサーバーです。雑談、お絵かき、情報交換など、様々なジャンルでの活動が行われています。サーバー内でBitZenyを送り合うこともできます。</p>
                 </div>
-                <div class="l-flex_justify_center l-flex_wrap o-w100per u-pb100">
-                    <div class="l-flex_justify_center l-flex_wrap o-w1k u-p16 u-font_sans">
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZenyフォーラム</h3>
-                                    <a href="https://twitter.com/MCPE_Yossi1114" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのあれこれについて話し合っているコミュニティーフォーラムです。Webサービスから取引所、ウォレットやコインの仕様について話し合っています。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.info/" target="_blank">BitZenyフォーラム</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny-wiki+</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZeny関連のニュースや導入方法をはじめ、企画・コミュニティ・技術者向け情報などを総合的に発信しています。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">暗号通貨BitZenyまとめWiki</a></div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>NOVAexchange</h3> <a href="https://twitter.com/nova_exchange" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">スウェーデンに本拠を置く取引所。登録には本人確認書類が必要です。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://novaexchange.com/" target="_blank">NOVAexchange</a></div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>Telegram BitZeny Japan</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">チャットツールTelegramのビットゼニーチャンネルです。主に企画、開発の場となっています。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://t.me/joinchat/EmaWHQ135_r0gga2E91jBQ" target="_blank">Telegram BitZeny Japan</a></div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Discord サーバー</h3><a href="https://twitter.com/uesitananame55" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">チャットツールDiscordのBitZenyサーバーです。雑談、お絵かき、情報交換など、様々なジャンルでの活動が行われています。サーバー内でBitZenyを送り合うこともできます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white bottom12" href="https://discord.gg/xmWd3yy" target="_blank">BitZeny Discord サーバー</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>CryptoBridge</h3> <a href="https://twitter.com/cryptobridge" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyをBTCやMONAと取引できる分散型取引所(DEX)です。ユーザー名とパスワードのみで利用できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://crypto-bridge.org/" target="_blank">CryptoBridge</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>Tradesatoshi</h3> <a href="https://twitter.com/TradeSatoshi" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">たくさんの暗号通貨が取り扱われている取引所。BTC,USDT,DOGE,LTCとの取引ができます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://tradesatoshi.com/" target="_blank">Tradesatoshi</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">namuyan.dip.jp MultiLightBlockExplorer</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">zenyinsight.tomotomo9696.xyz</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://insight.bitzeny.jp/" target="_blank">insight.bitzeny.jp</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.insight.monaco-ex.org/" target="_blank">zeny.insight.monaco-ex.org</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BlockBook</h3> <a href="https://twitter.com/uesitananame55" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">Blockbookは、 SatoshiLabsによって開発された、ブロックチェーンエクスプローラです。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zny.blockbook.ovh/" target="_blank">zny.blockbook.ovh</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BlockBook</h3> <a href="https://twitter.com/sanyodensan" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">Blockbookは、 SatoshiLabsによって開発された、ブロックチェーンエクスプローラです。</p>
-                                </div>
-                                <div class="u-p16 u-pt0">
-                                    <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.blockbook.zenypota.net/" target="_blank">zeny.blockbook.zenypota.net</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny Online Wallet</h3> <a href="https://twitter.com/zenywallet" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">BitZeny Online Walletは、お持ちのコンピューターにウォレットをダウンロードすることなく、自分のウォレットを持てるサービスです。盗難、パスワード紛失等は自己責任となりますのでご注意下さい。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.jp/" target="_blank">BitZeny Online Wallet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per o-link_h u-mb30">
-                            <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
-                                <div class="u-p16 u-pb0">
-                                    <h3>BitZeny神社</h3> <a href="https://twitter.com/Bitzeny_Shrine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
-                                    <p class="u-font_small u-pt14">埼玉県蓮田市にある国産暗号資産BitZenyを祀る神社 祠建設、グッツ作成、森林問題に取り組み合法的に伐採した国産木材を使い、特別なBitZeny木製コインを作成 暗号資産と地方を繋ぐ活動をしております。</p>
-                                </div>
-                                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://www.bitzenyjinjya.com/" target="_blank">BitZeny神社</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="o-w33per"></div>
-                        <div class="o-w33per"></div>
-                    </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white bottom12" href="https://discord.gg/xmWd3yy" target="_blank">BitZeny Discord サーバー</a>
                 </div>
+              </div>
             </div>
-        </section>
-        <!--フッター-->
-        <footer class="u-tilt u-tilt-14 u-mt-150 u-font_sans u-tiltbg_gray">
-            <div class="l-text_center o-w300 u-pt200 u-pb100 u-m0a">
-                <div class="l-flex_justify_sb u-font_bold">
-                    <a class="u-m8 u-font_small u-font_white" href="https://github.com/BitzenyCoreDevelopers" target="_blank">GitHub</a>
-                    <a class="u-m8 u-font_small u-font_white" href="https://bitcointalk.org/index.php?topic=849994.0" target="_blank">Bitcoin Forum</a>
-                    <a class="u-m8 u-font_small u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">Wiki</a>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>CryptoBridge</h3> <a href="https://twitter.com/cryptobridge" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyをBTCやMONAと取引できる分散型取引所(DEX)です。ユーザー名とパスワードのみで利用できます。</p>
                 </div>
+                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://crypto-bridge.org/" target="_blank">CryptoBridge</a>
+                </div>
+              </div>
             </div>
-            <p class="l-text_center o-w100per u-pb160 u-font_small">Copyright © 2017-2018 BitZeny Project. All Rights Reserved.</p>
-        </footer>
-    </main>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>Tradesatoshi</h3> <a href="https://twitter.com/TradeSatoshi" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">たくさんの暗号通貨が取り扱われている取引所。BTC,USDT,DOGE,LTCとの取引ができます。</p>
+                </div>
+                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://tradesatoshi.com/" target="_blank">Tradesatoshi</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny Block Explorer</h3> <a href="https://twitter.com/namuyan_mine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
+                </div>
+                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://namuyan.dip.jp/MultiLightBlockExplorer/index.php?page=selectcoin&coin=zeny" target="_blank">namuyan.dip.jp
+                    MultiLightBlockExplorer</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
+                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zenyinsight.tomotomo9696.xyz/" target="_blank">zenyinsight.tomotomo9696.xyz</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
+                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://insight.bitzeny.jp/" target="_blank">insight.bitzeny.jp</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny版insight</h3> <a href="#" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZenyのウォレットアドレスやトランザクションIDを入力することでウォレットの残高や、送金履歴を確認できます。また、発見されたブロックの詳細も確認できます。</p>
+                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.insight.monaco-ex.org/" target="_blank">zeny.insight.monaco-ex.org</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BlockBook</h3> <a href="https://twitter.com/uesitananame55" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">Blockbookは、 SatoshiLabsによって開発された、ブロックチェーンエクスプローラです。</p>
+                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zny.blockbook.ovh/" target="_blank">zny.blockbook.ovh</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BlockBook</h3> <a href="https://twitter.com/sanyodensan" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">Blockbookは、 SatoshiLabsによって開発された、ブロックチェーンエクスプローラです。</p>
+                </div>
+                <div class="u-p16 u-pt0">
+                  <a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://zeny.blockbook.zenypota.net/" target="_blank">zeny.blockbook.zenypota.net</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny Online Wallet</h3> <a href="https://twitter.com/zenywallet" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">BitZeny Online Walletは、お持ちのコンピューターにウォレットをダウンロードすることなく、自分のウォレットを持てるサービスです。盗難、パスワード紛失等は自己責任となりますのでご注意下さい。</p>
+                </div>
+                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="https://bitzeny.jp/" target="_blank">BitZeny Online Wallet</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per o-link_h u-mb30">
+              <div class="l-flex_direction_center l-flex_justify_sb l-text_center o-h100per u-m16 u-bg_gray u-font_gray">
+                <div class="u-p16 u-pb0">
+                  <h3>BitZeny神社</h3> <a href="https://twitter.com/Bitzeny_Shrine" class="u-m8 u-color1 u-iconize-round u-font_white u-font_bold u-font_small" target="_blank"><i class="fa fa-twitter twitter u-plr4" aria-hidden="true"></i>管理者</a>
+                  <p class="u-font_small u-pt14">埼玉県蓮田市にある国産暗号資産BitZenyを祀る神社 祠建設、グッツ作成、森林問題に取り組み合法的に伐採した国産木材を使い、特別なBitZeny木製コインを作成 暗号資産と地方を繋ぐ活動をしております。</p>
+                </div>
+                <div class="u-p16 u-pt0"><a class="o-w100per u-color2 u-iconize-square u-font_small u-font_bold u-font_white" href="http://www.bitzenyjinjya.com/" target="_blank">BitZeny神社</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-w33per"></div>
+            <div class="o-w33per"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--フッター-->
+    <footer class="u-tilt u-tilt-14 u-mt-150 u-font_sans u-tiltbg_gray">
+      <div class="l-text_center o-w300 u-pt200 u-pb100 u-m0a">
+        <div class="l-flex_justify_sb u-font_bold">
+          <a class="u-m8 u-font_small u-font_white" href="https://github.com/BitzenyCoreDevelopers" target="_blank">GitHub</a>
+          <a class="u-m8 u-font_small u-font_white" href="https://bitcointalk.org/index.php?topic=849994.0" target="_blank">Bitcoin Forum</a>
+          <a class="u-m8 u-font_small u-font_white" href="https://bitzeny.wiki.fc2.com/" target="_blank">Wiki</a>
+        </div>
+        <p class="l-text_center o-w100per u-pb160"><a class="u-m8 u-font_small u-font_white" href="mailto:bitzenyplus@gmail.com" target="_blank">✉ appoint to BitZenyPlus ✉</a></p>
+      </div>
+      <p class="l-text_center o-w100per u-pb160 u-font_small">Copyright © 2017-2020 BitZeny Project. All Rights Reserved.</p>
+    </footer>
+  </main>
 </body>
 
 </html>
